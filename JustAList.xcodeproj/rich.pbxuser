@@ -1,0 +1,119 @@
+// !$*UTF8*$!
+{
+	9B72D78A1416BB050089D81C /* JustAList */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = JustAList;
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	9B72D78B1416BB050089D81C /* JustAListTestHarness */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = JustAListTestHarness;
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	9B72D7A11416BB090089D81C /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	9B72D7A21416BB090089D81C /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	9BE6728C14110C6B00BBA7B6 /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 9B72D78A1416BB050089D81C /* JustAList */;
+		activeTarget = 9BE6729414110C6B00BBA7B6 /* JAL-App */;
+		codeSenseManager = 9B72D7A21416BB090089D81C /* Code sense */;
+		executables = (
+			9B72D78A1416BB050089D81C /* JustAList */,
+			9B72D78B1416BB050089D81C /* JustAListTestHarness */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					364,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 337035983;
+			PBXWorkspaceStateSaveDate = 337035983;
+		};
+		sourceControlManager = 9B72D7A11416BB090089D81C /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	9BE6729414110C6B00BBA7B6 /* JAL-App */ = {
+		activeExec = 0;
+		executables = (
+			9B72D78A1416BB050089D81C /* JustAList */,
+		);
+	};
+	9BE672B814110C6B00BBA7B6 /* JAL-UnitTests */ = {
+		activeExec = 0;
+	};
+}

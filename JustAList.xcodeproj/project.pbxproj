@@ -1,0 +1,693 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9B3B29C91416BF4E00FEC7A7 /* ClassMap.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B3B29B71416BF4E00FEC7A7 /* ClassMap.plist */; };
+		9B3B29CA1416BF4E00FEC7A7 /* JALListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B3B29B81416BF4E00FEC7A7 /* JALListView.xib */; };
+		9B3B29CB1416BF4E00FEC7A7 /* JALAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3B29BB1416BF4E00FEC7A7 /* JALAppDelegate.m */; };
+		9B3B29CC1416BF4E00FEC7A7 /* JALItemTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3B29BF1416BF4E00FEC7A7 /* JALItemTableCell.m */; };
+		9B3B29CD1416BF4E00FEC7A7 /* JALItemTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B3B29C01416BF4E00FEC7A7 /* JALItemTableCell.xib */; };
+		9B3B29CE1416BF4E00FEC7A7 /* JALListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3B29C21416BF4E00FEC7A7 /* JALListViewController.m */; };
+		9B3B29CF1416BF4E00FEC7A7 /* JALListViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3B29C41416BF4E00FEC7A7 /* JALListViewDataSource.m */; };
+		9B3B29D01416BF4E00FEC7A7 /* NSDictionary+Plist.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3B29C61416BF4E00FEC7A7 /* NSDictionary+Plist.m */; };
+		9B3B29D11416BF4E00FEC7A7 /* RJMDataFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3B29C81416BF4E00FEC7A7 /* RJMDataFacade.m */; };
+		9B7B8C3C144646F400D06ED3 /* JALAppDataStorageMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7B8C3B144646F400D06ED3 /* JALAppDataStorageMock.m */; };
+		9BA07DE4144585C3009DB2B6 /* JALAppDataInRAM.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA07DE3144585C3009DB2B6 /* JALAppDataInRAM.m */; };
+		9BC5C231177508040090A6C1 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B2CF0511427CBFB0003D3B9 /* SenTestingKit.framework */; };
+		9BC5C232177508040090A6C1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE6729914110C6B00BBA7B6 /* UIKit.framework */; };
+		9BC5C233177508040090A6C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE6729B14110C6B00BBA7B6 /* Foundation.framework */; };
+		9BC5C239177508040090A6C1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9BC5C237177508040090A6C1 /* InfoPlist.strings */; };
+		9BC5C23C177508040090A6C1 /* ComponentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC5C23B177508040090A6C1 /* ComponentTests.m */; };
+		9BC5C241177508BE0090A6C1 /* JALAppDataInRAMTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3B2A8F1417E3E300FEC7A7 /* JALAppDataInRAMTests.m */; };
+		9BC5C242177509B70090A6C1 /* JALAppDataMockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAC4F6B14116A84003500F6 /* JALAppDataMockTests.m */; };
+		9BC5C25B17750E660090A6C1 /* JALAppDataInRAM.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA07DE3144585C3009DB2B6 /* JALAppDataInRAM.m */; };
+		9BC5C25D17750E7D0090A6C1 /* JALListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE672E914115DBA00BBA7B6 /* JALListItem.m */; };
+		9BC5C25E17750E900090A6C1 /* JALItemTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3B29BF1416BF4E00FEC7A7 /* JALItemTableCell.m */; };
+		9BC5C26017750EB50090A6C1 /* JALListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3B29C21416BF4E00FEC7A7 /* JALListViewController.m */; };
+		9BC5C26217750F030090A6C1 /* JALListViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3B29C41416BF4E00FEC7A7 /* JALListViewDataSource.m */; };
+		9BC5C26417750F150090A6C1 /* RJMPersistentDataServiceForFilePlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE106A7146F133D00D4487D /* RJMPersistentDataServiceForFilePlist.m */; };
+		9BC5C26617750F190090A6C1 /* RJMDataFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3B29C81416BF4E00FEC7A7 /* RJMDataFacade.m */; };
+		9BC5C26817750F1D0090A6C1 /* PlistDataArchivingUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC0FA214424CF40054EF79 /* PlistDataArchivingUtil.m */; };
+		9BC5C26A17750F210090A6C1 /* NSDictionary+Plist.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3B29C61416BF4E00FEC7A7 /* NSDictionary+Plist.m */; };
+		9BC5C26D17750F300090A6C1 /* JALAppDataMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE672E514115D5B00BBA7B6 /* JALAppDataMock.m */; };
+		9BC5C26F17750F7A0090A6C1 /* JALAppDataStorageMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7B8C3B144646F400D06ED3 /* JALAppDataStorageMock.m */; };
+		9BC5C27117750F810090A6C1 /* JALAppDataMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE672E514115D5B00BBA7B6 /* JALAppDataMock.m */; };
+		9BDC0FA314424CF40054EF79 /* PlistDataArchivingUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC0FA214424CF40054EF79 /* PlistDataArchivingUtil.m */; };
+		9BE106A8146F133D00D4487D /* RJMPersistentDataServiceForFilePlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE106A7146F133D00D4487D /* RJMPersistentDataServiceForFilePlist.m */; };
+		9BE6729A14110C6B00BBA7B6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE6729914110C6B00BBA7B6 /* UIKit.framework */; };
+		9BE6729C14110C6B00BBA7B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE6729B14110C6B00BBA7B6 /* Foundation.framework */; };
+		9BE6729E14110C6B00BBA7B6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE6729D14110C6B00BBA7B6 /* CoreGraphics.framework */; };
+		9BE672A414110C6B00BBA7B6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9BE672A214110C6B00BBA7B6 /* InfoPlist.strings */; };
+		9BE672A714110C6B00BBA7B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE672A614110C6B00BBA7B6 /* main.m */; };
+		9BE672AD14110C6B00BBA7B6 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BE672AB14110C6B00BBA7B6 /* MainWindow.xib */; };
+		9BE672EA14115DBA00BBA7B6 /* JALListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE672E914115DBA00BBA7B6 /* JALListItem.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9B2CF0511427CBFB0003D3B9 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		9B3B29B71416BF4E00FEC7A7 /* ClassMap.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ClassMap.plist; sourceTree = "<group>"; };
+		9B3B29B91416BF4E00FEC7A7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/JALListView.xib; sourceTree = "<group>"; };
+		9B3B29BA1416BF4E00FEC7A7 /* JALAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JALAppDelegate.h; sourceTree = "<group>"; };
+		9B3B29BB1416BF4E00FEC7A7 /* JALAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JALAppDelegate.m; sourceTree = "<group>"; };
+		9B3B29BC1416BF4E00FEC7A7 /* JALConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JALConstants.h; sourceTree = "<group>"; };
+		9B3B29BE1416BF4E00FEC7A7 /* JALItemTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JALItemTableCell.h; sourceTree = "<group>"; };
+		9B3B29BF1416BF4E00FEC7A7 /* JALItemTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JALItemTableCell.m; sourceTree = "<group>"; };
+		9B3B29C01416BF4E00FEC7A7 /* JALItemTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JALItemTableCell.xib; sourceTree = "<group>"; };
+		9B3B29C11416BF4E00FEC7A7 /* JALListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JALListViewController.h; sourceTree = "<group>"; };
+		9B3B29C21416BF4E00FEC7A7 /* JALListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JALListViewController.m; sourceTree = "<group>"; };
+		9B3B29C31416BF4E00FEC7A7 /* JALListViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JALListViewDataSource.h; sourceTree = "<group>"; };
+		9B3B29C41416BF4E00FEC7A7 /* JALListViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JALListViewDataSource.m; sourceTree = "<group>"; };
+		9B3B29C51416BF4E00FEC7A7 /* NSDictionary+Plist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Plist.h"; sourceTree = "<group>"; };
+		9B3B29C61416BF4E00FEC7A7 /* NSDictionary+Plist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Plist.m"; sourceTree = "<group>"; };
+		9B3B29C71416BF4E00FEC7A7 /* RJMDataFacade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJMDataFacade.h; sourceTree = "<group>"; };
+		9B3B29C81416BF4E00FEC7A7 /* RJMDataFacade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RJMDataFacade.m; sourceTree = "<group>"; };
+		9B3B2A8E1417E3E300FEC7A7 /* JALAppDataInRAMTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JALAppDataInRAMTests.h; sourceTree = "<group>"; };
+		9B3B2A8F1417E3E300FEC7A7 /* JALAppDataInRAMTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JALAppDataInRAMTests.m; sourceTree = "<group>"; };
+		9B7B8C38144641ED00D06ED3 /* RJMPersistentDataServiceForFileProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJMPersistentDataServiceForFileProtocol.h; sourceTree = "<group>"; };
+		9B7B8C3A144646F400D06ED3 /* JALAppDataStorageMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JALAppDataStorageMock.h; sourceTree = "<group>"; };
+		9B7B8C3B144646F400D06ED3 /* JALAppDataStorageMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JALAppDataStorageMock.m; sourceTree = "<group>"; };
+		9BA07DE2144585C3009DB2B6 /* JALAppDataInRAM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JALAppDataInRAM.h; sourceTree = "<group>"; };
+		9BA07DE3144585C3009DB2B6 /* JALAppDataInRAM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JALAppDataInRAM.m; sourceTree = "<group>"; };
+		9BAC4F6A14116A84003500F6 /* JALAppDataMockTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JALAppDataMockTests.h; sourceTree = "<group>"; };
+		9BAC4F6B14116A84003500F6 /* JALAppDataMockTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JALAppDataMockTests.m; sourceTree = "<group>"; };
+		9BAD7034144D72D8000D717C /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		9BC5C230177508040090A6C1 /* ComponentTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ComponentTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BC5C236177508040090A6C1 /* ComponentTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ComponentTests-Info.plist"; sourceTree = "<group>"; };
+		9BC5C238177508040090A6C1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9BC5C23A177508040090A6C1 /* ComponentTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComponentTests.h; sourceTree = "<group>"; };
+		9BC5C23B177508040090A6C1 /* ComponentTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComponentTests.m; sourceTree = "<group>"; };
+		9BC5C23D177508040090A6C1 /* ComponentTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ComponentTests-Prefix.pch"; sourceTree = "<group>"; };
+		9BDC0FA114424CF40054EF79 /* PlistDataArchivingUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistDataArchivingUtil.h; sourceTree = "<group>"; };
+		9BDC0FA214424CF40054EF79 /* PlistDataArchivingUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlistDataArchivingUtil.m; sourceTree = "<group>"; };
+		9BE106A6146F133D00D4487D /* RJMPersistentDataServiceForFilePlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJMPersistentDataServiceForFilePlist.h; sourceTree = "<group>"; };
+		9BE106A7146F133D00D4487D /* RJMPersistentDataServiceForFilePlist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RJMPersistentDataServiceForFilePlist.m; sourceTree = "<group>"; };
+		9BE6729514110C6B00BBA7B6 /* JustAList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustAList.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BE6729914110C6B00BBA7B6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9BE6729B14110C6B00BBA7B6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9BE6729D14110C6B00BBA7B6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9BE672A114110C6B00BBA7B6 /* JustAList-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JustAList-Info.plist"; sourceTree = "<group>"; };
+		9BE672A314110C6B00BBA7B6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9BE672A514110C6B00BBA7B6 /* JustAList-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JustAList-Prefix.pch"; sourceTree = "<group>"; };
+		9BE672A614110C6B00BBA7B6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9BE672AC14110C6B00BBA7B6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		9BE672E414115D5B00BBA7B6 /* JALAppDataMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JALAppDataMock.h; sourceTree = "<group>"; };
+		9BE672E514115D5B00BBA7B6 /* JALAppDataMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JALAppDataMock.m; sourceTree = "<group>"; };
+		9BE672E714115D9800BBA7B6 /* JALAppData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JALAppData.h; sourceTree = "<group>"; };
+		9BE672E814115DBA00BBA7B6 /* JALListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JALListItem.h; sourceTree = "<group>"; };
+		9BE672E914115DBA00BBA7B6 /* JALListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JALListItem.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9BC5C22C177508040090A6C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BC5C231177508040090A6C1 /* SenTestingKit.framework in Frameworks */,
+				9BC5C232177508040090A6C1 /* UIKit.framework in Frameworks */,
+				9BC5C233177508040090A6C1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BE6729214110C6B00BBA7B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BE6729A14110C6B00BBA7B6 /* UIKit.framework in Frameworks */,
+				9BE6729C14110C6B00BBA7B6 /* Foundation.framework in Frameworks */,
+				9BE6729E14110C6B00BBA7B6 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9B3B29E61417438A00FEC7A7 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9BE672E714115D9800BBA7B6 /* JALAppData.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		9B3B29E7141743C600FEC7A7 /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				9BA07DE2144585C3009DB2B6 /* JALAppDataInRAM.h */,
+				9BA07DE3144585C3009DB2B6 /* JALAppDataInRAM.m */,
+				9BAD7032144D70F2000D717C /* Tests */,
+			);
+			name = Implementation;
+			sourceTree = "<group>";
+		};
+		9B3B29E8141744CD00FEC7A7 /* Data Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9BE672E814115DBA00BBA7B6 /* JALListItem.h */,
+				9BE672E914115DBA00BBA7B6 /* JALListItem.m */,
+			);
+			name = "Data Classes";
+			sourceTree = "<group>";
+		};
+		9B3B29E91417450800FEC7A7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9B3B29E61417438A00FEC7A7 /* Protocols */,
+				9B3B29E7141743C600FEC7A7 /* Implementation */,
+				9B3B29E8141744CD00FEC7A7 /* Data Classes */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9B3B29EA141757C500FEC7A7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9B3B29C11416BF4E00FEC7A7 /* JALListViewController.h */,
+				9B3B29C21416BF4E00FEC7A7 /* JALListViewController.m */,
+				9B3B29C31416BF4E00FEC7A7 /* JALListViewDataSource.h */,
+				9B3B29C41416BF4E00FEC7A7 /* JALListViewDataSource.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		9B3B29EB1417580C00FEC7A7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9BE672AB14110C6B00BBA7B6 /* MainWindow.xib */,
+				9B3B29B81416BF4E00FEC7A7 /* JALListView.xib */,
+				9B3B29C01416BF4E00FEC7A7 /* JALItemTableCell.xib */,
+				9B3B29BE1416BF4E00FEC7A7 /* JALItemTableCell.h */,
+				9B3B29BF1416BF4E00FEC7A7 /* JALItemTableCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		9B3B29EC1417585B00FEC7A7 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				9B7B8C9A14477E6E00D06ED3 /* RJM */,
+				9BDC0FA114424CF40054EF79 /* PlistDataArchivingUtil.h */,
+				9BDC0FA214424CF40054EF79 /* PlistDataArchivingUtil.m */,
+				9B3B29C51416BF4E00FEC7A7 /* NSDictionary+Plist.h */,
+				9B3B29C61416BF4E00FEC7A7 /* NSDictionary+Plist.m */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		9B7B8C391446469000D06ED3 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				9BE672E414115D5B00BBA7B6 /* JALAppDataMock.h */,
+				9BE672E514115D5B00BBA7B6 /* JALAppDataMock.m */,
+				9B7B8C3A144646F400D06ED3 /* JALAppDataStorageMock.h */,
+				9B7B8C3B144646F400D06ED3 /* JALAppDataStorageMock.m */,
+				9BAD7033144D716B000D717C /* Tests */,
+			);
+			name = Mock;
+			sourceTree = "<group>";
+		};
+		9B7B8C9A14477E6E00D06ED3 /* RJM */ = {
+			isa = PBXGroup;
+			children = (
+				9BE106A5146F121700D4487D /* PersistentDataService */,
+				9B3B29C71416BF4E00FEC7A7 /* RJMDataFacade.h */,
+				9B3B29C81416BF4E00FEC7A7 /* RJMDataFacade.m */,
+			);
+			name = RJM;
+			sourceTree = "<group>";
+		};
+		9BAD7032144D70F2000D717C /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				9B3B2A8E1417E3E300FEC7A7 /* JALAppDataInRAMTests.h */,
+				9B3B2A8F1417E3E300FEC7A7 /* JALAppDataInRAMTests.m */,
+			);
+			name = Tests;
+			path = ComponentTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		9BAD7033144D716B000D717C /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				9BAC4F6A14116A84003500F6 /* JALAppDataMockTests.h */,
+				9BAC4F6B14116A84003500F6 /* JALAppDataMockTests.m */,
+			);
+			name = Tests;
+			path = ComponentTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		9BC5C234177508040090A6C1 /* ComponentTests */ = {
+			isa = PBXGroup;
+			children = (
+				9BAD7034144D72D8000D717C /* README.txt */,
+				9BC5C23A177508040090A6C1 /* ComponentTests.h */,
+				9BC5C23B177508040090A6C1 /* ComponentTests.m */,
+				9BC5C235177508040090A6C1 /* Supporting Files */,
+			);
+			path = ComponentTests;
+			sourceTree = "<group>";
+		};
+		9BC5C235177508040090A6C1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9BC5C236177508040090A6C1 /* ComponentTests-Info.plist */,
+				9BC5C237177508040090A6C1 /* InfoPlist.strings */,
+				9BC5C23D177508040090A6C1 /* ComponentTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9BE106A5146F121700D4487D /* PersistentDataService */ = {
+			isa = PBXGroup;
+			children = (
+				9B7B8C38144641ED00D06ED3 /* RJMPersistentDataServiceForFileProtocol.h */,
+				9BE106A6146F133D00D4487D /* RJMPersistentDataServiceForFilePlist.h */,
+				9BE106A7146F133D00D4487D /* RJMPersistentDataServiceForFilePlist.m */,
+			);
+			name = PersistentDataService;
+			sourceTree = "<group>";
+		};
+		9BE6728A14110C6B00BBA7B6 = {
+			isa = PBXGroup;
+			children = (
+				9BE6729F14110C6B00BBA7B6 /* JustAList */,
+				9BC5C234177508040090A6C1 /* ComponentTests */,
+				9BE6729814110C6B00BBA7B6 /* Frameworks */,
+				9BE6729614110C6B00BBA7B6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9BE6729614110C6B00BBA7B6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9BE6729514110C6B00BBA7B6 /* JustAList.app */,
+				9BC5C230177508040090A6C1 /* ComponentTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9BE6729814110C6B00BBA7B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B2CF0511427CBFB0003D3B9 /* SenTestingKit.framework */,
+				9BE6729914110C6B00BBA7B6 /* UIKit.framework */,
+				9BE6729B14110C6B00BBA7B6 /* Foundation.framework */,
+				9BE6729D14110C6B00BBA7B6 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9BE6729F14110C6B00BBA7B6 /* JustAList */ = {
+			isa = PBXGroup;
+			children = (
+				9B3B29BC1416BF4E00FEC7A7 /* JALConstants.h */,
+				9B3B29BA1416BF4E00FEC7A7 /* JALAppDelegate.h */,
+				9B3B29BB1416BF4E00FEC7A7 /* JALAppDelegate.m */,
+				9B3B29E91417450800FEC7A7 /* Model */,
+				9B3B29EB1417580C00FEC7A7 /* View */,
+				9B3B29EA141757C500FEC7A7 /* Controller */,
+				9B3B29EC1417585B00FEC7A7 /* Library */,
+				9B7B8C391446469000D06ED3 /* Mock */,
+				9BE672A014110C6B00BBA7B6 /* Supporting Files */,
+			);
+			path = JustAList;
+			sourceTree = "<group>";
+		};
+		9BE672A014110C6B00BBA7B6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9BE672A114110C6B00BBA7B6 /* JustAList-Info.plist */,
+				9BE672A214110C6B00BBA7B6 /* InfoPlist.strings */,
+				9B3B29B71416BF4E00FEC7A7 /* ClassMap.plist */,
+				9BE672A514110C6B00BBA7B6 /* JustAList-Prefix.pch */,
+				9BE672A614110C6B00BBA7B6 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9BC5C22F177508040090A6C1 /* ComponentTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BC5C23E177508040090A6C1 /* Build configuration list for PBXNativeTarget "ComponentTests" */;
+			buildPhases = (
+				9BC5C22B177508040090A6C1 /* Sources */,
+				9BC5C22C177508040090A6C1 /* Frameworks */,
+				9BC5C22D177508040090A6C1 /* Resources */,
+				9BC5C22E177508040090A6C1 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ComponentTests;
+			productName = "JAL-ComponentTests";
+			productReference = 9BC5C230177508040090A6C1 /* ComponentTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		9BE6729414110C6B00BBA7B6 /* JustAList */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BE672CC14110C6B00BBA7B6 /* Build configuration list for PBXNativeTarget "JustAList" */;
+			buildPhases = (
+				9BE6729114110C6B00BBA7B6 /* Sources */,
+				9BE6729214110C6B00BBA7B6 /* Frameworks */,
+				9BE6729314110C6B00BBA7B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JustAList;
+			productName = JustAList;
+			productReference = 9BE6729514110C6B00BBA7B6 /* JustAList.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9BE6728C14110C6B00BBA7B6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = JAL;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Richard Mayer";
+			};
+			buildConfigurationList = 9BE6728F14110C6B00BBA7B6 /* Build configuration list for PBXProject "JustAList" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9BE6728A14110C6B00BBA7B6;
+			productRefGroup = 9BE6729614110C6B00BBA7B6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9BE6729414110C6B00BBA7B6 /* JustAList */,
+				9BC5C22F177508040090A6C1 /* ComponentTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9BC5C22D177508040090A6C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BC5C239177508040090A6C1 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BE6729314110C6B00BBA7B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BE672A414110C6B00BBA7B6 /* InfoPlist.strings in Resources */,
+				9BE672AD14110C6B00BBA7B6 /* MainWindow.xib in Resources */,
+				9B3B29C91416BF4E00FEC7A7 /* ClassMap.plist in Resources */,
+				9B3B29CA1416BF4E00FEC7A7 /* JALListView.xib in Resources */,
+				9B3B29CD1416BF4E00FEC7A7 /* JALItemTableCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9BC5C22E177508040090A6C1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9BC5C22B177508040090A6C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BC5C23C177508040090A6C1 /* ComponentTests.m in Sources */,
+				9BC5C241177508BE0090A6C1 /* JALAppDataInRAMTests.m in Sources */,
+				9BC5C242177509B70090A6C1 /* JALAppDataMockTests.m in Sources */,
+				9BC5C25B17750E660090A6C1 /* JALAppDataInRAM.m in Sources */,
+				9BC5C25D17750E7D0090A6C1 /* JALListItem.m in Sources */,
+				9BC5C25E17750E900090A6C1 /* JALItemTableCell.m in Sources */,
+				9BC5C26017750EB50090A6C1 /* JALListViewController.m in Sources */,
+				9BC5C26217750F030090A6C1 /* JALListViewDataSource.m in Sources */,
+				9BC5C26417750F150090A6C1 /* RJMPersistentDataServiceForFilePlist.m in Sources */,
+				9BC5C26617750F190090A6C1 /* RJMDataFacade.m in Sources */,
+				9BC5C26817750F1D0090A6C1 /* PlistDataArchivingUtil.m in Sources */,
+				9BC5C26A17750F210090A6C1 /* NSDictionary+Plist.m in Sources */,
+				9BC5C26D17750F300090A6C1 /* JALAppDataMock.m in Sources */,
+				9BC5C26F17750F7A0090A6C1 /* JALAppDataStorageMock.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BE6729114110C6B00BBA7B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BE672A714110C6B00BBA7B6 /* main.m in Sources */,
+				9BE672EA14115DBA00BBA7B6 /* JALListItem.m in Sources */,
+				9B3B29CB1416BF4E00FEC7A7 /* JALAppDelegate.m in Sources */,
+				9B3B29CC1416BF4E00FEC7A7 /* JALItemTableCell.m in Sources */,
+				9B3B29CE1416BF4E00FEC7A7 /* JALListViewController.m in Sources */,
+				9B3B29CF1416BF4E00FEC7A7 /* JALListViewDataSource.m in Sources */,
+				9B3B29D01416BF4E00FEC7A7 /* NSDictionary+Plist.m in Sources */,
+				9B3B29D11416BF4E00FEC7A7 /* RJMDataFacade.m in Sources */,
+				9BDC0FA314424CF40054EF79 /* PlistDataArchivingUtil.m in Sources */,
+				9BA07DE4144585C3009DB2B6 /* JALAppDataInRAM.m in Sources */,
+				9B7B8C3C144646F400D06ED3 /* JALAppDataStorageMock.m in Sources */,
+				9BE106A8146F133D00D4487D /* RJMPersistentDataServiceForFilePlist.m in Sources */,
+				9BC5C27117750F810090A6C1 /* JALAppDataMock.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9B3B29B81416BF4E00FEC7A7 /* JALListView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9B3B29B91416BF4E00FEC7A7 /* en */,
+			);
+			name = JALListView.xib;
+			sourceTree = "<group>";
+		};
+		9BC5C237177508040090A6C1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BC5C238177508040090A6C1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9BE672A214110C6B00BBA7B6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BE672A314110C6B00BBA7B6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9BE672AB14110C6B00BBA7B6 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BE672AC14110C6B00BBA7B6 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9BC5C23F177508040090A6C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ComponentTests/ComponentTests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				INFOPLIST_FILE = "ComponentTests/ComponentTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		9BC5C240177508040090A6C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ComponentTests/ComponentTests-Prefix.pch";
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				INFOPLIST_FILE = "ComponentTests/ComponentTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_AFTER_BUILD = NO;
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		9BE672CA14110C6B00BBA7B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Rich Mayer (MYPV2GRB6K)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0A8D8BE0-DFD5-49BA-931E-A91B82F74CCD";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9BE672CB14110C6B00BBA7B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		9BE672CD14110C6B00BBA7B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JustAList/JustAList-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "JustAList/JustAList-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)/SenTestingKit.framework/Versions/A\"",
+				);
+				PRODUCT_NAME = JustAList;
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9BE672CE14110C6B00BBA7B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JustAList/JustAList-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "JustAList/JustAList-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)/SenTestingKit.framework/Versions/A\"",
+				);
+				PRODUCT_NAME = JustAList;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9BC5C23E177508040090A6C1 /* Build configuration list for PBXNativeTarget "ComponentTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BC5C23F177508040090A6C1 /* Debug */,
+				9BC5C240177508040090A6C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BE6728F14110C6B00BBA7B6 /* Build configuration list for PBXProject "JustAList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BE672CA14110C6B00BBA7B6 /* Debug */,
+				9BE672CB14110C6B00BBA7B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BE672CC14110C6B00BBA7B6 /* Build configuration list for PBXNativeTarget "JustAList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BE672CD14110C6B00BBA7B6 /* Debug */,
+				9BE672CE14110C6B00BBA7B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9BE6728C14110C6B00BBA7B6 /* Project object */;
+}
