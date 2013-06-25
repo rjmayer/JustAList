@@ -176,9 +176,9 @@
 				9B501ED217765EC600DE1607 /* JALModelConstants.h */,
 				9B501ED317765EC600DE1607 /* JALModelConstants.m */,
 				9B3B29E8141744CD00FEC7A7 /* Data Object Classes */,
+				9B51A26F1776533400038E46 /* Data Sources */,
 				9B3B29E61417438A00FEC7A7 /* Protocols */,
 				9B8E47CF1775C87500905A7F /* DataStore API */,
-				9B51A26F1776533400038E46 /* Data Sources */,
 				9B3B29E7141743C600FEC7A7 /* Deprecated Implementation */,
 			);
 			name = Model;
@@ -304,6 +304,18 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		9BD82087177917CE00E63A82 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				9B3B29BC1416BF4E00FEC7A7 /* JALConstants.h */,
+				9BD8207F1779024F00E63A82 /* NSException+JALExceptionTypes.h */,
+				9BD820801779024F00E63A82 /* NSException+JALExceptionTypes.m */,
+				9BD8208417790C8500E63A82 /* NSException+JALExceptionTypesTest.h */,
+				9BD8208517790C8500E63A82 /* NSException+JALExceptionTypesTest.m */,
+			);
+			name = Global;
+			sourceTree = "<group>";
+		};
 		9BE106A5146F121700D4487D /* PersistentDataService */ = {
 			isa = PBXGroup;
 			children = (
@@ -348,13 +360,9 @@
 		9BE6729F14110C6B00BBA7B6 /* JustAList */ = {
 			isa = PBXGroup;
 			children = (
-				9B3B29BC1416BF4E00FEC7A7 /* JALConstants.h */,
 				9B3B29BA1416BF4E00FEC7A7 /* JALAppDelegate.h */,
 				9B3B29BB1416BF4E00FEC7A7 /* JALAppDelegate.m */,
-				9BD8207F1779024F00E63A82 /* NSException+JALExceptionTypes.h */,
-				9BD820801779024F00E63A82 /* NSException+JALExceptionTypes.m */,
-				9BD8208417790C8500E63A82 /* NSException+JALExceptionTypesTest.h */,
-				9BD8208517790C8500E63A82 /* NSException+JALExceptionTypesTest.m */,
+				9BD82087177917CE00E63A82 /* Global */,
 				9B3B29E91417450800FEC7A7 /* Model */,
 				9B3B29EB1417580C00FEC7A7 /* View */,
 				9B3B29EA141757C500FEC7A7 /* Controller */,

@@ -8,25 +8,62 @@
 
 #import <Foundation/Foundation.h>
 
+////////////////////////////////////////////////////////////////////////////////
+#pragma mark Type & Const Definitions
+////////////////////////////////////////////////////////////////////////////////
+
+// Enumeration of possible data sets that can be generated
+typedef enum {
+	JALFixtureDataTypeUnknown = -1,
+	//JALFixtureDataTypeForceAnException,
+	JALFixtureDataTypeListItems
+} JALFixtureDataTypeEnum;
+
+typedef struct {
+    JALFixtureDataTypeEnum  type;
+	NSString*               keyStr;
+	NSString*               collectionClassTypeStr;
+    NSString*               objectClassTypeStr;
+} JALFixtureDataTypeStruct;
+
+extern const JALFixtureDataTypeStruct kJALFixtureDataCollections [];
+
+////////////////////////////////////////////////////////////////////////////////
+#pragma mark - Protocol Definition
+////////////////////////////////////////////////////////////////////////////////
+
+// Protocol to facilitate writing mock implementations
 @protocol JALDataFixture <NSObject>
-- (NSDictionary *)objects;
+- (NSDictionary *)objectCollections;
 @end
+
+
+////////////////////////////////////////////////////////////////////////////////
+#pragma mark - Interface Definition
+////////////////////////////////////////////////////////////////////////////////
 
 @interface JALHardcodedFixture : NSObject <JALDataFixture>
 
 /*!
- * Returns a dictionary of NSSets, indexed using one of the kJALDataTypeCollectionKeyString
- * strings (which are defined in the constant array kJALDataTypeCollectionKeyStrings
- * and idexed from the enum type kJALDataTypeCollectionType.
+ * Returns one or more collections of objects, for each fixture data type
+ * kJALFixtureDataCollections defines the class types for the respective
+ * collections and objects. Before returning the objects (initialised on the 
+ * fly) an exception if raised if the objects/collections created don't match
+ * the expected types (internal error).
  *
- * A test should fail if it finds a key other than one of those.
+ * It's not possible to test the exception, without first manually "breaking"
+ * the hard coded data generation.
  *
  * Each set contains identical object types, corresponding to the specific key
  * 
  * A test should fail if it finds any other data type.
- *
- * E.g. objects[kJALPersistentDataTypeKeyListItems] returns a set of
- * kJALDataTypeListItem objects.
  */
-@property (nonatomic, retain, readonly) NSDictionary *objects;
+@property (nonatomic, retain, readonly) NSDictionary *objectCollections;
+
+// These accessors are mostly intended for validation of the returned data,
+// E.g. validation by a unit test
+- (NSString*)keyNameForDataType:(JALFixtureDataTypeEnum)fixtureDataType;
+- (NSString*)collectionClassForDataType:(JALFixtureDataTypeEnum)fixtureDataType;
+- (NSString*)objectClassTypeForDataType:(JALFixtureDataTypeEnum)fixtureDataType;
+
 @end

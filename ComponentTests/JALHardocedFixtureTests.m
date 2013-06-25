@@ -9,7 +9,6 @@
 #import <SenTestingKit/SenTestingKit.h>
 
 #import "JALHardcodedFixture.h"
-#import "JALModelConstants.h"
 
 #pragma mark Public Inteface
 @interface JALHardocedFixtureTests : SenTestCase
@@ -46,29 +45,38 @@
  * Test Case 000000: testObjectsAccessor
  *
  * Expected Result:
- * Accessor 'objects' should return a dictionary of objects
- * - keynames should all be known
+ * Accessor 'objects' should return a dictionary of sets
+ * - their keynames should all be known (e.g. kJALFixtureDataKeys array,
+ *    indexed by enum type JALFixtureDataKeyEnum)
  * - values should all be instances of NSSet
+ * - all objects of the set should be instances of the same class
+ * - it should be possible to dynamically get the class type, required for 
+ *   a specific key
  *
  */
 -(void)testObjectsAccessor_000000
 {
     // Test Conditions
-    // TODO: this is defined differently now!
+    // The set of valid key strings must be filled dynamically, in order not
+    // to have to update the test after every data model update (test is self
+    // maintaining)
     NSSet *validKeys = [NSSet setWithObjects:
-                        kJALPersistentDataKeyListItems,
                         nil];
+    STAssertTrue([validKeys count] > 0,
+                 @"TEST / IMPLEMENTATION IS UNFINISHED: pending developer spec of JALFixtureDataKeyEnum or similar");
     
     // Test Execution
     NSDictionary *actualResult = nil;
-    STAssertNoThrow(actualResult = self.unitUnderTest.objects, nil);
+    STAssertNoThrow(actualResult = self.unitUnderTest.objectCollections, nil);
     
     // Test Evaluation
     NSSet *actualKeys = [NSSet setWithArray:[actualResult allKeys]];
     STAssertTrue([actualKeys isSubsetOfSet:validKeys],
                  @"JALHardcodedFixture uses unknown keys or JALHardcodedFixtureTests needs updating");
-    
-    // TODO: check they're all the correct class
+
+    // TODO: check it's an NSSet
+
+    // TODO: check it's objects are all the correct class
 }
 
 @end

@@ -12,31 +12,49 @@
 #import "JALModelConstants.h"
 #import "JALListItem.h"
 
-#pragma mark Private Inteface
+
+////////////////////////////////////////////////////////////////////////////////
+#pragma mark Const Declarations
+////////////////////////////////////////////////////////////////////////////////
+
+const JALFixtureDataTypeStruct kJALFixtureDataCollections [] =
+{
+    //  The data set for this key,          is a kind of    containing instances of...
+	{JALFixtureDataTypeListItems,
+        @"JALFixtureDataTypeListItems",     @"NSSet",       @"JALListItem"},
+    
+    // Sentinal JALExceptionTypeUnknown marks end of the array
+    {JALFixtureDataTypeUnknown, nil, nil}
+};
+
+
+////////////////////////////////////////////////////////////////////////////////
+#pragma mark - Private Inteface
+////////////////////////////////////////////////////////////////////////////////
+
 @interface JALHardcodedFixture ()
 - (NSSet*)listItemObjects;
 @end
 
+
+////////////////////////////////////////////////////////////////////////////////
+#pragma mark - Implementation
+////////////////////////////////////////////////////////////////////////////////
+
 @implementation JALHardcodedFixture
 
-@synthesize objects = _objects;
+@synthesize objectCollections = _objects;
+
+#pragma mark Lifecycle
 
 - (id)init
 {
 	if (!(self = [super init])) return nil;
     
+    // TODO: now we've got enums, this should be done different to avoid making mistakes
     _objects = [NSDictionary dictionaryWithObjectsAndKeys:
                 [self listItemObjects], kJALPersistentDataKeyListItems,
                 nil];
-    
-    // TODO: verify that set of _objects.allKeys is a subset of
-    // kJALSizeOfPersistentDataDictKeysArray
-    
-    /*
-    for (int i=0; i < kJALSizeOfPersistentDataDictKeysArray; i++) {
-        NSLog(@"my constant string is: %@", kJALPersistentDataDictKeysArray[i]);
-    }
-     */
     
     return self;
 }
@@ -47,6 +65,30 @@
     
     [super dealloc];
 }
+
+#pragma mark Public Methods
+
+- (NSString*)keyNameForDataType:(JALFixtureDataTypeEnum)fixtureDataType
+{
+    // FIXME: implement
+    return @"";
+}
+
+- (NSString*)collectionClassForDataType:(JALFixtureDataTypeEnum)fixtureDataType
+{
+    // FIXME: implement
+    return @"";
+}
+
+- (NSString*)objectClassTypeForDataType:(JALFixtureDataTypeEnum)fixtureDataType
+{
+    // FIXME: implement
+    return @"";
+}
+
+////////////////////////////////////////////////////////////////////////////////
+#pragma mark - Here's where the data actually gets manufactured
+////////////////////////////////////////////////////////////////////////////////
 
 #pragma mark Init Objects of Type: JALListItem
 
