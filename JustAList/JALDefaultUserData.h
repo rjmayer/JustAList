@@ -9,32 +9,12 @@
 #import <Foundation/Foundation.h>
 
 ////////////////////////////////////////////////////////////////////////////////
-#pragma mark Type & Const Definitions
-////////////////////////////////////////////////////////////////////////////////
-
-// Enumeration of possible data sets that can be generated
-typedef enum {
-	JALUserDataTypeUnknown = -1,
-	//JALUserDataTypeForceAnException,
-	JALUserDataTypeListItems
-} JALUserDataTypeEnum;
-
-typedef struct {
-    JALUserDataTypeEnum     type;
-	NSString*               keyStr;
-	NSString*               collectionClassTypeStr;
-    NSString*               objectClassTypeStr;
-} JALUserDataTypeStruct;
-
-extern const JALUserDataTypeStruct kJALUserDataCollections [];
-
-////////////////////////////////////////////////////////////////////////////////
 #pragma mark - Protocol Definition
 ////////////////////////////////////////////////////////////////////////////////
 
 // Protocol to facilitate writing mock implementations
 @protocol JALUserDataSource <NSObject>
-- (NSDictionary *)objectCollections;
+- (NSDictionary *)userDataDict;
 @end
 
 
@@ -59,12 +39,6 @@ extern const JALUserDataTypeStruct kJALUserDataCollections [];
  * 
  * A test should fail if it finds any other data type.
  */
-@property (nonatomic, retain, readonly) NSDictionary *objectCollections;
-
-// These accessors are mostly intended for validation of the returned data,
-// E.g. validation by a unit test
-- (NSString*)keyNameForDataType:(JALUserDataTypeEnum)fixtureDataType;
-- (NSString*)collectionClassForDataType:(JALUserDataTypeEnum)fixtureDataType;
-- (NSString*)objectClassTypeForDataType:(JALUserDataTypeEnum)fixtureDataType;
+@property (nonatomic, retain, readonly) NSDictionary *userDataDict;
 
 @end

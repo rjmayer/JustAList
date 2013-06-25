@@ -10,11 +10,11 @@
 
 #import "JALDefaultUserData.h"
 
-@interface JALCustomFixture : JALDefaultUserData
+@interface JALCustomUserData : JALDefaultUserData
 - (id)initWithCustomFixture:(NSDictionary*)fixture;
 @end
 
-@implementation JALCustomFixture
+@implementation JALCustomUserData
 - (id)initWithCustomFixture:(NSDictionary*)fixture
 {
     // TODO: implement me, when the time comes

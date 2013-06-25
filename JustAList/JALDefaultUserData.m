@@ -14,21 +14,6 @@
 
 
 ////////////////////////////////////////////////////////////////////////////////
-#pragma mark Const Declarations
-////////////////////////////////////////////////////////////////////////////////
-
-const JALUserDataTypeStruct kJALUserDataCollections [] =
-{
-    //  The data set for this key,       is a kind of    containing instances of...
-	{JALUserDataTypeListItems,
-        @"JALUserDataTypeListItems",     @"NSSet",       @"JALListItem"},
-    
-    // Sentinal JALUserDataTypeUnknown marks end of the array
-    {JALUserDataTypeUnknown, nil, nil}
-};
-
-
-////////////////////////////////////////////////////////////////////////////////
 #pragma mark - Private Inteface
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -43,7 +28,7 @@ const JALUserDataTypeStruct kJALUserDataCollections [] =
 
 @implementation JALDefaultUserData
 
-@synthesize objectCollections = _objects;
+@synthesize userDataDict = _objects;
 
 #pragma mark Lifecycle
 
@@ -64,26 +49,6 @@ const JALUserDataTypeStruct kJALUserDataCollections [] =
     _objects = nil;
     
     [super dealloc];
-}
-
-#pragma mark Public Methods
-
-- (NSString*)keyNameForDataType:(JALUserDataTypeEnum)fixtureDataType
-{
-    // FIXME: implement
-    return @"";
-}
-
-- (NSString*)collectionClassForDataType:(JALUserDataTypeEnum)fixtureDataType
-{
-    // FIXME: implement
-    return @"";
-}
-
-- (NSString*)objectClassTypeForDataType:(JALUserDataTypeEnum)fixtureDataType
-{
-    // FIXME: implement
-    return @"";
 }
 
 ////////////////////////////////////////////////////////////////////////////////

@@ -1,5 +1,5 @@
 //
-//  JALHardocedFixtureTests.m
+//  JALUserDataDictionarySpecTests.m
 //  JustAList
 //
 //  Created by Richard Mayer on 23/06/2013.
@@ -8,23 +8,37 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 
-#import "JALDefaultUserData.h"
+#import "JALUserDataDictionarySpec.h"
 
+////////////////////////////////////////////////////////////////////////////////
 #pragma mark Public Inteface
-@interface JALDefaultUserDataTests : SenTestCase
+////////////////////////////////////////////////////////////////////////////////
+
+@interface JALUserDataDictionarySpecTests : SenTestCase
 @end
 
+
+////////////////////////////////////////////////////////////////////////////////
 #pragma mark Private Inteface
+////////////////////////////////////////////////////////////////////////////////
+
 @interface JALDefaultUserDataTests ()
-@property (nonatomic, retain) JALDefaultUserData *unitUnderTest;
+@property (nonatomic, retain) JALUserDataDictionarySpec *unitUnderTest;
 @end
 
+
+////////////////////////////////////////////////////////////////////////////////
 #pragma mark Implementation
-@implementation JALDefaultUserDataTests
+////////////////////////////////////////////////////////////////////////////////
+
+@implementation JALUserDataDictionarySpecTests
 
 @synthesize unitUnderTest = _unitUnderTest;
 
+//---------------------------
 #pragma mark SetUp & TearDown
+//---------------------------
+
 - (void)setUp
 {
     [super setUp];
@@ -39,7 +53,10 @@
     [super tearDown];
 }
 
+
+//---------------------------
 #pragma mark Tests
+//---------------------------
 
 /*!
  * Test Case 000000: testObjectsAccessor

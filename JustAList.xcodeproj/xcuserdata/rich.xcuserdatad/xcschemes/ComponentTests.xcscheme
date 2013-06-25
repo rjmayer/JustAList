@@ -28,6 +28,12 @@
                <Test
                   Identifier = "JALAppDataMockTests">
                </Test>
+               <Test
+                  Identifier = "JALDefaultUserDataTests">
+               </Test>
+               <Test
+                  Identifier = "NSException_JALExceptionTypesTests">
+               </Test>
             </SkippedTests>
          </TestableReference>
       </Testables>
