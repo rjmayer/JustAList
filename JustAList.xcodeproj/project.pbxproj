@@ -18,9 +18,9 @@
 		9B3B29D11416BF4E00FEC7A7 /* RJMDataFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3B29C81416BF4E00FEC7A7 /* RJMDataFacade.m */; };
 		9B501ED1177659BB00DE1607 /* JALCustomFixture.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B501ED0177659BB00DE1607 /* JALCustomFixture.m */; };
 		9B501ED417765EC600DE1607 /* JALModelConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B501ED317765EC600DE1607 /* JALModelConstants.m */; };
-		9B501ED71776717A00DE1607 /* JALHardcodedFixture.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B501ED61776717A00DE1607 /* JALHardcodedFixture.m */; };
-		9B501EDB1777296C00DE1607 /* JALHardocedFixtureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B501EDA1777296C00DE1607 /* JALHardocedFixtureTests.m */; };
-		9B501EDC177731E000DE1607 /* JALHardcodedFixture.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B501ED61776717A00DE1607 /* JALHardcodedFixture.m */; };
+		9B501ED71776717A00DE1607 /* JALDefaultUserData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B501ED61776717A00DE1607 /* JALDefaultUserData.m */; };
+		9B501EDB1777296C00DE1607 /* JALDefaultUserDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B501EDA1777296C00DE1607 /* JALDefaultUserDataTests.m */; };
+		9B501EDC177731E000DE1607 /* JALDefaultUserData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B501ED61776717A00DE1607 /* JALDefaultUserData.m */; };
 		9B501EDD1777323F00DE1607 /* JALModelConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B501ED317765EC600DE1607 /* JALModelConstants.m */; };
 		9B501EDE177732EA00DE1607 /* JALListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE672E914115DBA00BBA7B6 /* JALListItem.m */; };
 		9B7B8C3C144646F400D06ED3 /* JALAppDataStorageMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7B8C3B144646F400D06ED3 /* JALAppDataStorageMock.m */; };
@@ -71,9 +71,9 @@
 		9B501ED0177659BB00DE1607 /* JALCustomFixture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JALCustomFixture.m; sourceTree = "<group>"; };
 		9B501ED217765EC600DE1607 /* JALModelConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JALModelConstants.h; sourceTree = "<group>"; };
 		9B501ED317765EC600DE1607 /* JALModelConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JALModelConstants.m; sourceTree = "<group>"; };
-		9B501ED61776717A00DE1607 /* JALHardcodedFixture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JALHardcodedFixture.m; sourceTree = "<group>"; };
-		9B501ED81777236000DE1607 /* JALHardcodedFixture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JALHardcodedFixture.h; sourceTree = "<group>"; };
-		9B501EDA1777296C00DE1607 /* JALHardocedFixtureTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JALHardocedFixtureTests.m; path = ComponentTests/JALHardocedFixtureTests.m; sourceTree = SOURCE_ROOT; };
+		9B501ED61776717A00DE1607 /* JALDefaultUserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JALDefaultUserData.m; sourceTree = "<group>"; };
+		9B501ED81777236000DE1607 /* JALDefaultUserData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JALDefaultUserData.h; sourceTree = "<group>"; };
+		9B501EDA1777296C00DE1607 /* JALDefaultUserDataTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JALDefaultUserDataTests.m; path = ComponentTests/JALDefaultUserDataTests.m; sourceTree = SOURCE_ROOT; };
 		9B7B8C38144641ED00D06ED3 /* RJMPersistentDataServiceForFileProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJMPersistentDataServiceForFileProtocol.h; sourceTree = "<group>"; };
 		9B7B8C3A144646F400D06ED3 /* JALAppDataStorageMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JALAppDataStorageMock.h; sourceTree = "<group>"; };
 		9B7B8C3B144646F400D06ED3 /* JALAppDataStorageMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JALAppDataStorageMock.m; sourceTree = "<group>"; };
@@ -222,9 +222,9 @@
 		9B51A26F1776533400038E46 /* Data Sources */ = {
 			isa = PBXGroup;
 			children = (
-				9B501ED81777236000DE1607 /* JALHardcodedFixture.h */,
-				9B501ED61776717A00DE1607 /* JALHardcodedFixture.m */,
-				9B501EDA1777296C00DE1607 /* JALHardocedFixtureTests.m */,
+				9B501ED81777236000DE1607 /* JALDefaultUserData.h */,
+				9B501ED61776717A00DE1607 /* JALDefaultUserData.m */,
+				9B501EDA1777296C00DE1607 /* JALDefaultUserDataTests.m */,
 				9B501ED0177659BB00DE1607 /* JALCustomFixture.m */,
 			);
 			name = "Data Sources";
@@ -495,8 +495,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B501EDB1777296C00DE1607 /* JALHardocedFixtureTests.m in Sources */,
-				9B501EDC177731E000DE1607 /* JALHardcodedFixture.m in Sources */,
+				9B501EDB1777296C00DE1607 /* JALDefaultUserDataTests.m in Sources */,
+				9B501EDC177731E000DE1607 /* JALDefaultUserData.m in Sources */,
 				9B501EDD1777323F00DE1607 /* JALModelConstants.m in Sources */,
 				9B501EDE177732EA00DE1607 /* JALListItem.m in Sources */,
 				9BD820821779024F00E63A82 /* NSException+JALExceptionTypes.m in Sources */,
@@ -527,7 +527,7 @@
 				9B8E47CE1775C85900905A7F /* JALDataFromWeb.m in Sources */,
 				9B501ED1177659BB00DE1607 /* JALCustomFixture.m in Sources */,
 				9B501ED417765EC600DE1607 /* JALModelConstants.m in Sources */,
-				9B501ED71776717A00DE1607 /* JALHardcodedFixture.m in Sources */,
+				9B501ED71776717A00DE1607 /* JALDefaultUserData.m in Sources */,
 				9BD820811779024F00E63A82 /* NSException+JALExceptionTypes.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -587,6 +587,7 @@
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 1;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ComponentTests/ComponentTests-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (

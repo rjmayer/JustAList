@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-#import "JALHardcodedFixture.h"
+#import "JALDefaultUserData.h"
 
-@interface JALCustomFixture : JALHardcodedFixture
+@interface JALCustomFixture : JALDefaultUserData
 - (id)initWithCustomFixture:(NSDictionary*)fixture;
 @end
 

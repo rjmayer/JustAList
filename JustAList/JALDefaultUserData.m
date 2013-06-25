@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "JALHardcodedFixture.h"
+#import "JALDefaultUserData.h"
 #import "JALModelConstants.h"
 #import "JALListItem.h"
 
@@ -17,14 +17,14 @@
 #pragma mark Const Declarations
 ////////////////////////////////////////////////////////////////////////////////
 
-const JALFixtureDataTypeStruct kJALFixtureDataCollections [] =
+const JALUserDataTypeStruct kJALUserDataCollections [] =
 {
-    //  The data set for this key,          is a kind of    containing instances of...
-	{JALFixtureDataTypeListItems,
-        @"JALFixtureDataTypeListItems",     @"NSSet",       @"JALListItem"},
+    //  The data set for this key,       is a kind of    containing instances of...
+	{JALUserDataTypeListItems,
+        @"JALUserDataTypeListItems",     @"NSSet",       @"JALListItem"},
     
-    // Sentinal JALExceptionTypeUnknown marks end of the array
-    {JALFixtureDataTypeUnknown, nil, nil}
+    // Sentinal JALUserDataTypeUnknown marks end of the array
+    {JALUserDataTypeUnknown, nil, nil}
 };
 
 
@@ -32,7 +32,7 @@ const JALFixtureDataTypeStruct kJALFixtureDataCollections [] =
 #pragma mark - Private Inteface
 ////////////////////////////////////////////////////////////////////////////////
 
-@interface JALHardcodedFixture ()
+@interface JALDefaultUserData ()
 - (NSSet*)listItemObjects;
 @end
 
@@ -41,7 +41,7 @@ const JALFixtureDataTypeStruct kJALFixtureDataCollections [] =
 #pragma mark - Implementation
 ////////////////////////////////////////////////////////////////////////////////
 
-@implementation JALHardcodedFixture
+@implementation JALDefaultUserData
 
 @synthesize objectCollections = _objects;
 
@@ -68,19 +68,19 @@ const JALFixtureDataTypeStruct kJALFixtureDataCollections [] =
 
 #pragma mark Public Methods
 
-- (NSString*)keyNameForDataType:(JALFixtureDataTypeEnum)fixtureDataType
+- (NSString*)keyNameForDataType:(JALUserDataTypeEnum)fixtureDataType
 {
     // FIXME: implement
     return @"";
 }
 
-- (NSString*)collectionClassForDataType:(JALFixtureDataTypeEnum)fixtureDataType
+- (NSString*)collectionClassForDataType:(JALUserDataTypeEnum)fixtureDataType
 {
     // FIXME: implement
     return @"";
 }
 
-- (NSString*)objectClassTypeForDataType:(JALFixtureDataTypeEnum)fixtureDataType
+- (NSString*)objectClassTypeForDataType:(JALUserDataTypeEnum)fixtureDataType
 {
     // FIXME: implement
     return @"";

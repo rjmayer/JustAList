@@ -8,19 +8,19 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 
-#import "JALHardcodedFixture.h"
+#import "JALDefaultUserData.h"
 
 #pragma mark Public Inteface
-@interface JALHardocedFixtureTests : SenTestCase
+@interface JALDefaultUserDataTests : SenTestCase
 @end
 
 #pragma mark Private Inteface
-@interface JALHardocedFixtureTests ()
-@property (nonatomic, retain)JALHardcodedFixture *unitUnderTest;
+@interface JALDefaultUserDataTests ()
+@property (nonatomic, retain) JALDefaultUserData *unitUnderTest;
 @end
 
 #pragma mark Implementation
-@implementation JALHardocedFixtureTests
+@implementation JALDefaultUserDataTests
 
 @synthesize unitUnderTest = _unitUnderTest;
 
@@ -29,7 +29,7 @@
 {
     [super setUp];
     
-    self.unitUnderTest = [[[JALHardcodedFixture alloc] init] autorelease];
+    self.unitUnderTest = [[[JALDefaultUserData alloc] init] autorelease];
 }
 
 - (void)tearDown
@@ -63,7 +63,7 @@
     NSSet *validKeys = [NSSet setWithObjects:
                         nil];
     STAssertTrue([validKeys count] > 0,
-                 @"TEST / IMPLEMENTATION IS UNFINISHED: pending developer spec of JALFixtureDataKeyEnum or similar");
+                 @"TEST / IMPLEMENTATION IS UNFINISHED: pending developer spec of JALUserDataTypeEnum");
     
     // Test Execution
     NSDictionary *actualResult = nil;
@@ -72,7 +72,7 @@
     // Test Evaluation
     NSSet *actualKeys = [NSSet setWithArray:[actualResult allKeys]];
     STAssertTrue([actualKeys isSubsetOfSet:validKeys],
-                 @"JALHardcodedFixture uses unknown keys or JALHardcodedFixtureTests needs updating");
+                 @"JALDefaultUserData uses unknown keys or JALDefaultUserDataTests needs updating");
 
     // TODO: check it's an NSSet
 
