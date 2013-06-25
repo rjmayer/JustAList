@@ -21,6 +21,14 @@
                BlueprintName = "ComponentTests"
                ReferencedContainer = "container:JustAList.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "JALAppDataInRAMTests">
+               </Test>
+               <Test
+                  Identifier = "JALAppDataMockTests">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
    </TestAction>

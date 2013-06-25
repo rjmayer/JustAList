@@ -16,27 +16,27 @@
 		9B3B29CF1416BF4E00FEC7A7 /* JALListViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3B29C41416BF4E00FEC7A7 /* JALListViewDataSource.m */; };
 		9B3B29D01416BF4E00FEC7A7 /* NSDictionary+Plist.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3B29C61416BF4E00FEC7A7 /* NSDictionary+Plist.m */; };
 		9B3B29D11416BF4E00FEC7A7 /* RJMDataFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3B29C81416BF4E00FEC7A7 /* RJMDataFacade.m */; };
+		9B501ED1177659BB00DE1607 /* JALCustomFixture.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B501ED0177659BB00DE1607 /* JALCustomFixture.m */; };
+		9B501ED417765EC600DE1607 /* JALModelConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B501ED317765EC600DE1607 /* JALModelConstants.m */; };
+		9B501ED71776717A00DE1607 /* JALHardcodedFixture.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B501ED61776717A00DE1607 /* JALHardcodedFixture.m */; };
+		9B501EDB1777296C00DE1607 /* JALHardocedFixtureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B501EDA1777296C00DE1607 /* JALHardocedFixtureTests.m */; };
+		9B501EDC177731E000DE1607 /* JALHardcodedFixture.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B501ED61776717A00DE1607 /* JALHardcodedFixture.m */; };
+		9B501EDD1777323F00DE1607 /* JALModelConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B501ED317765EC600DE1607 /* JALModelConstants.m */; };
+		9B501EDE177732EA00DE1607 /* JALListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE672E914115DBA00BBA7B6 /* JALListItem.m */; };
 		9B7B8C3C144646F400D06ED3 /* JALAppDataStorageMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7B8C3B144646F400D06ED3 /* JALAppDataStorageMock.m */; };
+		9B8E47C51775C7EA00905A7F /* JALDataFromFixtureClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8E47C41775C7EA00905A7F /* JALDataFromFixtureClass.m */; };
+		9B8E47C81775C80C00905A7F /* JALDataFromPlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8E47C71775C80C00905A7F /* JALDataFromPlist.m */; };
+		9B8E47CB1775C82400905A7F /* JALDataFromCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8E47CA1775C82400905A7F /* JALDataFromCoreData.m */; };
+		9B8E47CE1775C85900905A7F /* JALDataFromWeb.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8E47CD1775C85800905A7F /* JALDataFromWeb.m */; };
 		9BA07DE4144585C3009DB2B6 /* JALAppDataInRAM.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA07DE3144585C3009DB2B6 /* JALAppDataInRAM.m */; };
 		9BC5C231177508040090A6C1 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B2CF0511427CBFB0003D3B9 /* SenTestingKit.framework */; };
 		9BC5C232177508040090A6C1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE6729914110C6B00BBA7B6 /* UIKit.framework */; };
 		9BC5C233177508040090A6C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE6729B14110C6B00BBA7B6 /* Foundation.framework */; };
 		9BC5C239177508040090A6C1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9BC5C237177508040090A6C1 /* InfoPlist.strings */; };
-		9BC5C23C177508040090A6C1 /* ComponentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC5C23B177508040090A6C1 /* ComponentTests.m */; };
-		9BC5C241177508BE0090A6C1 /* JALAppDataInRAMTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3B2A8F1417E3E300FEC7A7 /* JALAppDataInRAMTests.m */; };
-		9BC5C242177509B70090A6C1 /* JALAppDataMockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAC4F6B14116A84003500F6 /* JALAppDataMockTests.m */; };
-		9BC5C25B17750E660090A6C1 /* JALAppDataInRAM.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA07DE3144585C3009DB2B6 /* JALAppDataInRAM.m */; };
-		9BC5C25D17750E7D0090A6C1 /* JALListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE672E914115DBA00BBA7B6 /* JALListItem.m */; };
-		9BC5C25E17750E900090A6C1 /* JALItemTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3B29BF1416BF4E00FEC7A7 /* JALItemTableCell.m */; };
-		9BC5C26017750EB50090A6C1 /* JALListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3B29C21416BF4E00FEC7A7 /* JALListViewController.m */; };
-		9BC5C26217750F030090A6C1 /* JALListViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3B29C41416BF4E00FEC7A7 /* JALListViewDataSource.m */; };
-		9BC5C26417750F150090A6C1 /* RJMPersistentDataServiceForFilePlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE106A7146F133D00D4487D /* RJMPersistentDataServiceForFilePlist.m */; };
-		9BC5C26617750F190090A6C1 /* RJMDataFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3B29C81416BF4E00FEC7A7 /* RJMDataFacade.m */; };
-		9BC5C26817750F1D0090A6C1 /* PlistDataArchivingUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC0FA214424CF40054EF79 /* PlistDataArchivingUtil.m */; };
-		9BC5C26A17750F210090A6C1 /* NSDictionary+Plist.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3B29C61416BF4E00FEC7A7 /* NSDictionary+Plist.m */; };
-		9BC5C26D17750F300090A6C1 /* JALAppDataMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE672E514115D5B00BBA7B6 /* JALAppDataMock.m */; };
-		9BC5C26F17750F7A0090A6C1 /* JALAppDataStorageMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7B8C3B144646F400D06ED3 /* JALAppDataStorageMock.m */; };
 		9BC5C27117750F810090A6C1 /* JALAppDataMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE672E514115D5B00BBA7B6 /* JALAppDataMock.m */; };
+		9BD820811779024F00E63A82 /* NSException+JALExceptionTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD820801779024F00E63A82 /* NSException+JALExceptionTypes.m */; };
+		9BD820821779024F00E63A82 /* NSException+JALExceptionTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD820801779024F00E63A82 /* NSException+JALExceptionTypes.m */; };
+		9BD8208617790C8500E63A82 /* NSException+JALExceptionTypesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD8208517790C8500E63A82 /* NSException+JALExceptionTypesTest.m */; };
 		9BDC0FA314424CF40054EF79 /* PlistDataArchivingUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC0FA214424CF40054EF79 /* PlistDataArchivingUtil.m */; };
 		9BE106A8146F133D00D4487D /* RJMPersistentDataServiceForFilePlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE106A7146F133D00D4487D /* RJMPersistentDataServiceForFilePlist.m */; };
 		9BE6729A14110C6B00BBA7B6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE6729914110C6B00BBA7B6 /* UIKit.framework */; };
@@ -66,11 +66,25 @@
 		9B3B29C61416BF4E00FEC7A7 /* NSDictionary+Plist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Plist.m"; sourceTree = "<group>"; };
 		9B3B29C71416BF4E00FEC7A7 /* RJMDataFacade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJMDataFacade.h; sourceTree = "<group>"; };
 		9B3B29C81416BF4E00FEC7A7 /* RJMDataFacade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RJMDataFacade.m; sourceTree = "<group>"; };
-		9B3B2A8E1417E3E300FEC7A7 /* JALAppDataInRAMTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JALAppDataInRAMTests.h; sourceTree = "<group>"; };
-		9B3B2A8F1417E3E300FEC7A7 /* JALAppDataInRAMTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JALAppDataInRAMTests.m; sourceTree = "<group>"; };
+		9B3B2A8E1417E3E300FEC7A7 /* JALAppDataInRAMTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JALAppDataInRAMTests.h; path = ../ComponentTests/JALAppDataInRAMTests.h; sourceTree = "<group>"; };
+		9B3B2A8F1417E3E300FEC7A7 /* JALAppDataInRAMTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JALAppDataInRAMTests.m; path = ../ComponentTests/JALAppDataInRAMTests.m; sourceTree = "<group>"; };
+		9B501ED0177659BB00DE1607 /* JALCustomFixture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JALCustomFixture.m; sourceTree = "<group>"; };
+		9B501ED217765EC600DE1607 /* JALModelConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JALModelConstants.h; sourceTree = "<group>"; };
+		9B501ED317765EC600DE1607 /* JALModelConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JALModelConstants.m; sourceTree = "<group>"; };
+		9B501ED61776717A00DE1607 /* JALHardcodedFixture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JALHardcodedFixture.m; sourceTree = "<group>"; };
+		9B501ED81777236000DE1607 /* JALHardcodedFixture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JALHardcodedFixture.h; sourceTree = "<group>"; };
+		9B501EDA1777296C00DE1607 /* JALHardocedFixtureTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JALHardocedFixtureTests.m; path = ComponentTests/JALHardocedFixtureTests.m; sourceTree = SOURCE_ROOT; };
 		9B7B8C38144641ED00D06ED3 /* RJMPersistentDataServiceForFileProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJMPersistentDataServiceForFileProtocol.h; sourceTree = "<group>"; };
 		9B7B8C3A144646F400D06ED3 /* JALAppDataStorageMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JALAppDataStorageMock.h; sourceTree = "<group>"; };
 		9B7B8C3B144646F400D06ED3 /* JALAppDataStorageMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JALAppDataStorageMock.m; sourceTree = "<group>"; };
+		9B8E47C31775C7EA00905A7F /* JALDataFromFixtureClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JALDataFromFixtureClass.h; sourceTree = "<group>"; };
+		9B8E47C41775C7EA00905A7F /* JALDataFromFixtureClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JALDataFromFixtureClass.m; sourceTree = "<group>"; };
+		9B8E47C61775C80C00905A7F /* JALDataFromPlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JALDataFromPlist.h; sourceTree = "<group>"; };
+		9B8E47C71775C80C00905A7F /* JALDataFromPlist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JALDataFromPlist.m; sourceTree = "<group>"; };
+		9B8E47C91775C82400905A7F /* JALDataFromCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JALDataFromCoreData.h; sourceTree = "<group>"; };
+		9B8E47CA1775C82400905A7F /* JALDataFromCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JALDataFromCoreData.m; sourceTree = "<group>"; };
+		9B8E47CC1775C85800905A7F /* JALDataFromWeb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JALDataFromWeb.h; sourceTree = "<group>"; };
+		9B8E47CD1775C85800905A7F /* JALDataFromWeb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JALDataFromWeb.m; sourceTree = "<group>"; };
 		9BA07DE2144585C3009DB2B6 /* JALAppDataInRAM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JALAppDataInRAM.h; sourceTree = "<group>"; };
 		9BA07DE3144585C3009DB2B6 /* JALAppDataInRAM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JALAppDataInRAM.m; sourceTree = "<group>"; };
 		9BAC4F6A14116A84003500F6 /* JALAppDataMockTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JALAppDataMockTests.h; sourceTree = "<group>"; };
@@ -79,9 +93,11 @@
 		9BC5C230177508040090A6C1 /* ComponentTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ComponentTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BC5C236177508040090A6C1 /* ComponentTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ComponentTests-Info.plist"; sourceTree = "<group>"; };
 		9BC5C238177508040090A6C1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		9BC5C23A177508040090A6C1 /* ComponentTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComponentTests.h; sourceTree = "<group>"; };
-		9BC5C23B177508040090A6C1 /* ComponentTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComponentTests.m; sourceTree = "<group>"; };
 		9BC5C23D177508040090A6C1 /* ComponentTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ComponentTests-Prefix.pch"; sourceTree = "<group>"; };
+		9BD8207F1779024F00E63A82 /* NSException+JALExceptionTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSException+JALExceptionTypes.h"; sourceTree = "<group>"; };
+		9BD820801779024F00E63A82 /* NSException+JALExceptionTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSException+JALExceptionTypes.m"; sourceTree = "<group>"; };
+		9BD8208417790C8500E63A82 /* NSException+JALExceptionTypesTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSException+JALExceptionTypesTest.h"; path = "ComponentTests/NSException+JALExceptionTypesTest.h"; sourceTree = SOURCE_ROOT; };
+		9BD8208517790C8500E63A82 /* NSException+JALExceptionTypesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSException+JALExceptionTypesTest.m"; path = "ComponentTests/NSException+JALExceptionTypesTest.m"; sourceTree = SOURCE_ROOT; };
 		9BDC0FA114424CF40054EF79 /* PlistDataArchivingUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistDataArchivingUtil.h; sourceTree = "<group>"; };
 		9BDC0FA214424CF40054EF79 /* PlistDataArchivingUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlistDataArchivingUtil.m; sourceTree = "<group>"; };
 		9BE106A6146F133D00D4487D /* RJMPersistentDataServiceForFilePlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJMPersistentDataServiceForFilePlist.h; sourceTree = "<group>"; };
@@ -134,31 +150,36 @@
 			name = Protocols;
 			sourceTree = "<group>";
 		};
-		9B3B29E7141743C600FEC7A7 /* Implementation */ = {
+		9B3B29E7141743C600FEC7A7 /* Deprecated Implementation */ = {
 			isa = PBXGroup;
 			children = (
 				9BA07DE2144585C3009DB2B6 /* JALAppDataInRAM.h */,
 				9BA07DE3144585C3009DB2B6 /* JALAppDataInRAM.m */,
-				9BAD7032144D70F2000D717C /* Tests */,
+				9B3B2A8E1417E3E300FEC7A7 /* JALAppDataInRAMTests.h */,
+				9B3B2A8F1417E3E300FEC7A7 /* JALAppDataInRAMTests.m */,
 			);
-			name = Implementation;
+			name = "Deprecated Implementation";
 			sourceTree = "<group>";
 		};
-		9B3B29E8141744CD00FEC7A7 /* Data Classes */ = {
+		9B3B29E8141744CD00FEC7A7 /* Data Object Classes */ = {
 			isa = PBXGroup;
 			children = (
 				9BE672E814115DBA00BBA7B6 /* JALListItem.h */,
 				9BE672E914115DBA00BBA7B6 /* JALListItem.m */,
 			);
-			name = "Data Classes";
+			name = "Data Object Classes";
 			sourceTree = "<group>";
 		};
 		9B3B29E91417450800FEC7A7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9B501ED217765EC600DE1607 /* JALModelConstants.h */,
+				9B501ED317765EC600DE1607 /* JALModelConstants.m */,
+				9B3B29E8141744CD00FEC7A7 /* Data Object Classes */,
 				9B3B29E61417438A00FEC7A7 /* Protocols */,
-				9B3B29E7141743C600FEC7A7 /* Implementation */,
-				9B3B29E8141744CD00FEC7A7 /* Data Classes */,
+				9B8E47CF1775C87500905A7F /* DataStore API */,
+				9B51A26F1776533400038E46 /* Data Sources */,
+				9B3B29E7141743C600FEC7A7 /* Deprecated Implementation */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -198,6 +219,17 @@
 			name = Library;
 			sourceTree = "<group>";
 		};
+		9B51A26F1776533400038E46 /* Data Sources */ = {
+			isa = PBXGroup;
+			children = (
+				9B501ED81777236000DE1607 /* JALHardcodedFixture.h */,
+				9B501ED61776717A00DE1607 /* JALHardcodedFixture.m */,
+				9B501EDA1777296C00DE1607 /* JALHardocedFixtureTests.m */,
+				9B501ED0177659BB00DE1607 /* JALCustomFixture.m */,
+			);
+			name = "Data Sources";
+			sourceTree = "<group>";
+		};
 		9B7B8C391446469000D06ED3 /* Mock */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,15 +252,28 @@
 			name = RJM;
 			sourceTree = "<group>";
 		};
-		9BAD7032144D70F2000D717C /* Tests */ = {
+		9B8E47CF1775C87500905A7F /* DataStore API */ = {
 			isa = PBXGroup;
 			children = (
-				9B3B2A8E1417E3E300FEC7A7 /* JALAppDataInRAMTests.h */,
-				9B3B2A8F1417E3E300FEC7A7 /* JALAppDataInRAMTests.m */,
+				9B8E47C31775C7EA00905A7F /* JALDataFromFixtureClass.h */,
+				9B8E47C41775C7EA00905A7F /* JALDataFromFixtureClass.m */,
+				9B8E47C61775C80C00905A7F /* JALDataFromPlist.h */,
+				9B8E47C71775C80C00905A7F /* JALDataFromPlist.m */,
+				9B8E47C91775C82400905A7F /* JALDataFromCoreData.h */,
+				9B8E47CA1775C82400905A7F /* JALDataFromCoreData.m */,
+				9B8E47CC1775C85800905A7F /* JALDataFromWeb.h */,
+				9B8E47CD1775C85800905A7F /* JALDataFromWeb.m */,
 			);
-			name = Tests;
-			path = ComponentTests;
-			sourceTree = SOURCE_ROOT;
+			name = "DataStore API";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		9B8E47D01775C90E00905A7F /* JALTesting */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = JALTesting;
+			sourceTree = "<group>";
 		};
 		9BAD7033144D716B000D717C /* Tests */ = {
 			isa = PBXGroup;
@@ -244,8 +289,6 @@
 			isa = PBXGroup;
 			children = (
 				9BAD7034144D72D8000D717C /* README.txt */,
-				9BC5C23A177508040090A6C1 /* ComponentTests.h */,
-				9BC5C23B177508040090A6C1 /* ComponentTests.m */,
 				9BC5C235177508040090A6C1 /* Supporting Files */,
 			);
 			path = ComponentTests;
@@ -293,6 +336,7 @@
 		9BE6729814110C6B00BBA7B6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9B8E47D01775C90E00905A7F /* JALTesting */,
 				9B2CF0511427CBFB0003D3B9 /* SenTestingKit.framework */,
 				9BE6729914110C6B00BBA7B6 /* UIKit.framework */,
 				9BE6729B14110C6B00BBA7B6 /* Foundation.framework */,
@@ -307,6 +351,10 @@
 				9B3B29BC1416BF4E00FEC7A7 /* JALConstants.h */,
 				9B3B29BA1416BF4E00FEC7A7 /* JALAppDelegate.h */,
 				9B3B29BB1416BF4E00FEC7A7 /* JALAppDelegate.m */,
+				9BD8207F1779024F00E63A82 /* NSException+JALExceptionTypes.h */,
+				9BD820801779024F00E63A82 /* NSException+JALExceptionTypes.m */,
+				9BD8208417790C8500E63A82 /* NSException+JALExceptionTypesTest.h */,
+				9BD8208517790C8500E63A82 /* NSException+JALExceptionTypesTest.m */,
 				9B3B29E91417450800FEC7A7 /* Model */,
 				9B3B29EB1417580C00FEC7A7 /* View */,
 				9B3B29EA141757C500FEC7A7 /* Controller */,
@@ -439,20 +487,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BC5C23C177508040090A6C1 /* ComponentTests.m in Sources */,
-				9BC5C241177508BE0090A6C1 /* JALAppDataInRAMTests.m in Sources */,
-				9BC5C242177509B70090A6C1 /* JALAppDataMockTests.m in Sources */,
-				9BC5C25B17750E660090A6C1 /* JALAppDataInRAM.m in Sources */,
-				9BC5C25D17750E7D0090A6C1 /* JALListItem.m in Sources */,
-				9BC5C25E17750E900090A6C1 /* JALItemTableCell.m in Sources */,
-				9BC5C26017750EB50090A6C1 /* JALListViewController.m in Sources */,
-				9BC5C26217750F030090A6C1 /* JALListViewDataSource.m in Sources */,
-				9BC5C26417750F150090A6C1 /* RJMPersistentDataServiceForFilePlist.m in Sources */,
-				9BC5C26617750F190090A6C1 /* RJMDataFacade.m in Sources */,
-				9BC5C26817750F1D0090A6C1 /* PlistDataArchivingUtil.m in Sources */,
-				9BC5C26A17750F210090A6C1 /* NSDictionary+Plist.m in Sources */,
-				9BC5C26D17750F300090A6C1 /* JALAppDataMock.m in Sources */,
-				9BC5C26F17750F7A0090A6C1 /* JALAppDataStorageMock.m in Sources */,
+				9B501EDB1777296C00DE1607 /* JALHardocedFixtureTests.m in Sources */,
+				9B501EDC177731E000DE1607 /* JALHardcodedFixture.m in Sources */,
+				9B501EDD1777323F00DE1607 /* JALModelConstants.m in Sources */,
+				9B501EDE177732EA00DE1607 /* JALListItem.m in Sources */,
+				9BD820821779024F00E63A82 /* NSException+JALExceptionTypes.m in Sources */,
+				9BD8208617790C8500E63A82 /* NSException+JALExceptionTypesTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +513,14 @@
 				9B7B8C3C144646F400D06ED3 /* JALAppDataStorageMock.m in Sources */,
 				9BE106A8146F133D00D4487D /* RJMPersistentDataServiceForFilePlist.m in Sources */,
 				9BC5C27117750F810090A6C1 /* JALAppDataMock.m in Sources */,
+				9B8E47C51775C7EA00905A7F /* JALDataFromFixtureClass.m in Sources */,
+				9B8E47C81775C80C00905A7F /* JALDataFromPlist.m in Sources */,
+				9B8E47CB1775C82400905A7F /* JALDataFromCoreData.m in Sources */,
+				9B8E47CE1775C85900905A7F /* JALDataFromWeb.m in Sources */,
+				9B501ED1177659BB00DE1607 /* JALCustomFixture.m in Sources */,
+				9B501ED417765EC600DE1607 /* JALModelConstants.m in Sources */,
+				9B501ED71776717A00DE1607 /* JALHardcodedFixture.m in Sources */,
+				9BD820811779024F00E63A82 /* NSException+JALExceptionTypes.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
