@@ -1,13 +1,13 @@
 //
-//  ComponentTests.h
-//  ComponentTests
+//  JALTestDataFromWeb.m
+//  JustAList
 //
 //  Created by Richard Mayer on 22/06/2013.
 //  Copyright (c) 2013 Richard Mayer. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import "JALTestDataFromWeb.h"
 
-@interface ComponentTests : SenTestCase
+@implementation JALTestDataFromWeb
 
 @end
