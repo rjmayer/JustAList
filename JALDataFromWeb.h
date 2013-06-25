@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface JALTestDataFromWeb : NSObject
+@interface JALDataFromWeb : NSObject
 
 @end

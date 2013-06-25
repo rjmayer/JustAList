@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Richard Mayer. All rights reserved.
 //
 
-#import "JALTestDataFromWeb.h"
+#import "JALDataFromWeb.h"
 
-@implementation JALTestDataFromWeb
+@implementation JALDataFromWeb
 
 @end

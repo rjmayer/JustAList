@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Richard Mayer. All rights reserved.
 //
 
-#import "JALTestDataFromPlist.h"
+#import "JALDataFromPlist.h"
 
-@implementation JALTestDataFromPlist
+@implementation JALDataFromPlist
 
 @end

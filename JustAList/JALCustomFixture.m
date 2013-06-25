@@ -6,8 +6,19 @@
 //  Copyright (c) 2013 Richard Mayer. All rights reserved.
 //
 
-#import "JALDefaultUserData.h"
+#import <Foundation/Foundation.h>
 
-@implementation JALDefaultUserData
+#import "JALHardcodedFixture.h"
 
+@interface JALCustomFixture : JALHardcodedFixture
+- (id)initWithCustomFixture:(NSDictionary*)fixture;
+@end
+
+@implementation JALCustomFixture
+- (id)initWithCustomFixture:(NSDictionary*)fixture
+{
+    // TODO: implement me, when the time comes
+//    _listItems = [NSSet setWithSet:[fixture listItems]];
+    return [super init];
+}
 @end

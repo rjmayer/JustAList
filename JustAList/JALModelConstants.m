@@ -1,22 +1,32 @@
 //
-//  SCCTestingConstants.m
-//  ios-qa-challenge
+//  JALModelConstants.h
+//  JustAList
 //
 //  Created by Richard Mayer on 20/06/2013.
-//  Copyright (c) 2013 Slavko Krucaj. All rights reserved.
+//  Copyright (c) 2013 Richard Mayer. All rights reserved.
 //
 
-#import "SCCTestingConstants.h"
+#import "JALModelConstants.h"
+
+typedef enum {
+	JALHardcodedFixtureDictKeyListItems
+} JALHardcodedFixtureDictKey;
+
+// This is a C array
+NSString * const kJALPersistentDataDictKeysArray[] = {
+    @"kJALPersistentDataKeyListItems"
+};
+int kJALSizeOfPersistentDataDictKeysArray = SIZE_OF(kJALPersistentDataDictKeysArray);
+
+// To use it
+/*
+ for (int i=0; i < kJALSizeOfPersistentDataDictKeysArray; i++)
+ NSLog(@"my constant string is: %@", kJALPersistentDataDictKeysArray[i]);
+ */
+
+
+
 
 // General consts
-NSString * const kSCTestingAccountUser              = @"ios-challenge";
-NSString * const kSCTestingAccountPass              = @"ios-challenge";
-float const kSCTestingMaxResponseWaitSecs           = 5;
+NSString * const kJALPersistentDataKeyListItems =  @"kJALPersistentDataKeyListItems";
 
-// General expected result consts
-NSUInteger const kSCTestingExpectedNumFollowers     = 2;
-NSUInteger const kSCTestingExpectedNumLikes         = 7;
-
-// Class specific expected result consts
-NSUInteger const kSCTestingFollowersTVCExpectedNumSections  = 1;
-NSUInteger const kSCTestingLikesTVCExpectedNumSections      = 1;
