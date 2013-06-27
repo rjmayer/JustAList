@@ -17,3 +17,7 @@
 #pragma mark Constants
 
 #define kRJM_ClassMapFilepath [[NSBundle mainBundle] pathForResource:__kRJM_ClassMapName ofType:@"plist"]
+
+// TODO: move this into JALMacros
+#define SIZE_OF(MY_CONSTANT_STRING_ARRAY) sizeof(MY_CONSTANT_STRING_ARRAY) / sizeof(MY_CONSTANT_STRING_ARRAY[0])
+

@@ -11,7 +11,7 @@
 #import "JALUserDataDictionarySpec.h"
 
 ////////////////////////////////////////////////////////////////////////////////
-#pragma mark Public Inteface
+#pragma mark Public Interface
 ////////////////////////////////////////////////////////////////////////////////
 
 @interface JALUserDataDictionarySpecTests : SenTestCase
@@ -19,7 +19,7 @@
 
 
 ////////////////////////////////////////////////////////////////////////////////
-#pragma mark Private Inteface
+#pragma mark Private Interface
 ////////////////////////////////////////////////////////////////////////////////
 
 @interface JALUserDataDictionarySpecTests ()
@@ -42,14 +42,17 @@
 - (void)setUp
 {
     [super setUp];
+    // --
     
-    self.unitUnderTest = [[[JALUserDataDictionarySpec alloc] init] autorelease];
+    STAssertNoThrow(self.unitUnderTest = [[[JALUserDataDictionarySpec alloc] init] autorelease],
+                    @"Test failed. The unit under test raised an exception, whilst being instantiated.");
 }
 
 - (void)tearDown
 {
-    self.unitUnderTest = nil;
+    [self.unitUnderTest release];
     
+    //--
     [super tearDown];
 }
 
@@ -58,13 +61,70 @@
 #pragma mark Tests
 //---------------------------
 
-// TEST that the array size is equal to ...EndValid - ...StartValid
-// and that ...StartValid = 0
-// and that ...Unknown = -1
+-(void)testEnumAndArrayConsistency
+{
+    if (self.unitUnderTest != nil)
+    {
+        NSUInteger userDataTypeCount = 0;
+        
+        NSLog(@"Testing the correct structure of enum JALUserDataTypeEnum...");
+        
+        // There is a ...First enumeration = 0
+        NSLog(@"JALUserDataTypeEnumFirst = %d (expect 0)", JALUserDataTypeEnumFirst);
+        BOOL isJALUserDataTypeEnumFirstGood = (JALUserDataTypeEnumFirst == 0);
+        STAssertTrue(isJALUserDataTypeEnumFirstGood, nil);
+        
+        // There is an ...Last enumeration > 0
+        NSLog(@"JALUserDataTypeEnumLast = %d (expect 0 or larger)", JALUserDataTypeEnumLast);
+        BOOL isJALUserDataTypeEnumLastGood = (JALUserDataTypeEnumLast >= 0);
+        STAssertTrue(isJALUserDataTypeEnumLastGood, nil);
+        
+        BOOL isEnumCountDeclarationValidated = NO;
+        if (isJALUserDataTypeEnumFirstGood && isJALUserDataTypeEnumLastGood)
+        {
+            // The USER_DATA_TYPE_ENUMS_COUNT define is in sync with the actual number of enums?
+            for (JALUserDataTypeEnum userDataType = JALUserDataTypeEnumFirst;
+                 userDataType <= JALUserDataTypeEnumLast;
+                 ++userDataType)
+            {
+                userDataTypeCount++;
+                // For the log out, knock 1 off the userData type count, just so that the
+                // message "looks" correct. Although perfectly valid "UserData typ 1 with
+                // enum val 0" would seem wrong to the casual observer!)
+                NSLog(@"JALUserDataTypeEnum enum %d has the value %d", userDataTypeCount-1, userDataType);
+            }
+            
+            isEnumCountDeclarationValidated = (userDataTypeCount = USER_DATA_TYPE_ENUMS_COUNT);
+            STAssertTrue(isEnumCountDeclarationValidated,
+                         @"The object under test declares %d types (USER_DATA_TYPE_ENUMS_COUNT), but between JALUserDataTypeEnumFirst (%d) and JALUserDataTypeEnumLast (%d) there are %d enumerations. Perhaps someone forgot to update USER_DATA_TYPE_ENUMS_COUNT or the First/Last aliases are incorrect?", USER_DATA_TYPE_ENUMS_COUNT, JALUserDataTypeEnumFirst, JALUserDataTypeEnumLast, JALUserDataTypeEnumLast-JALUserDataTypeEnumFirst+1);
+        }
+        
+        if (isEnumCountDeclarationValidated)
+        {
+            // Test that enumerations map onto the array of structs
+            int sizeOfUserDataDefsArray = (sizeof(kJALUserDataCollections) / sizeof(kJALUserDataCollections[0]));
+            
+            STAssertTrue(USER_DATA_TYPE_ENUMS_COUNT == sizeOfUserDataDefsArray,
+                         @"kJALUserDataCollections array size doesn't correlate with the number of types defined by UserDataTypes");
+            
+            STAssertTrue(USER_DATA_TYPE_ENUMS_COUNT <= sizeOfUserDataDefsArray,
+                         @"kJALUserDataCollections array size %d is larger than expected (%d) - potential double defined types?", sizeOfUserDataDefsArray, USER_DATA_TYPE_ENUMS_COUNT);
+            
+            STAssertTrue(USER_DATA_TYPE_ENUMS_COUNT >= sizeOfUserDataDefsArray,
+                         @"kJALUserDataCollections array size %d is smaller than expected (%d) - definitions may be missing for some types.", sizeOfUserDataDefsArray, USER_DATA_TYPE_ENUMS_COUNT);
+            
+            NSLog(@"There are %d userData type enums defined (incl. 'Unknown'), corresponding to %d array elements to store user data type descriptions", sizeOfUserDataDefsArray, USER_DATA_TYPE_ENUMS_COUNT);
+        }
+    }
+    
+    else {
+        STFail(@"Test not executed because unit under test was not initialised");
+    }
+}
 
 /*!
  * Method under test:
- * - (NSString*)keyNameForDataType:(JALUserDataTypeEnum)userDataType;
+ * - (NSString*)keynameForSetOfDataType:(JALUserDataTypeEnum)userDataType;
  *
  * Test description:
  * Method called with all valid enum values for userDataType. The result
@@ -86,71 +146,48 @@
  */
 -(void)testKeyNameForDataType_valid
 {
-    NSString* keyNameResult = nil;
-    NSMutableSet* allKeyNameResults = [NSMutableSet set];
-    
-    STAssertTrue(JALUserDataTypeEnumStartValid == 0,
-                 @"Uh-oh, looks like the JALUserDataTypeEnum definition is bad. JALUserDataTypeEnumStartValid should be = 0, followed by all the other valid ones. JALUserDataTypeUnknown should be -1");
-    
-    for (JALUserDataTypeEnum userDataType = JALUserDataTypeEnumStartValid;
-         userDataType <= JALUserDataTypeEnumEndValid;
-         ++userDataType)
+    if (self.unitUnderTest != nil)
     {
-        STAssertNoThrow(keyNameResult = [self.unitUnderTest keyNameForDataType:userDataType],
-                        @"Unexpected exceptions are bad!");
-        STAssertNotNil(keyNameResult,
-                       @"`keyNameForDataType:` shouldn't return nil for a valid enum (%d). Please check the key name definitions in JALUserDataDictionarySpec.m. Also check validity of the enum declaration in JALUserDataDictionarySpecTests.h E.g. does it define a consecutive range of valid values, using ...StartValid and ...EndValid?",
-                       userDataType);
-        STAssertFalse([keyNameResult isEqualToString:@""],
-                      @"`keyNameForDataType:` shouldn't return an empty string for a valid enum (%d). Please check the key name definitions in JALUserDataDictionarySpec.m. Also check validity of the enum declaration in JALUserDataDictionarySpecTests.h E.g. does it define a consecutive range of valid values, using ...StartValid and ...EndValid?",
-                      userDataType);
-
-        // If the keyname is valid...
-        if (keyNameResult != nil && ![keyNameResult isEqualToString:@""]) {
-            // Make sure the name isn't already in use
-            STAssertFalse([allKeyNameResults containsObject:keyNameResult],
-                          @"Oh dear. Looks like the key name %@ has beed double defined?! Please check the key name definitions in JALUserDataDictionarySpec.m",
-                          keyNameResult);
+        NSString* keyNameResult = nil;
+        NSMutableSet* allKeyNameResults = [NSMutableSet set];
+        
+        STAssertTrue(JALUserDataTypeEnumFirst == 0,
+                     @"Uh-oh, looks like the JALUserDataTypeEnum definition is bad. JALUserDataTypeEnumStartValid should be = 0, followed by all the other valid ones. JALUserDataTypeUnknown should be -1");
+        
+        for (JALUserDataTypeEnum userDataType = JALUserDataTypeEnumFirst;
+             userDataType <= JALUserDataTypeEnumLast;
+             ++userDataType)
+        {
+            STAssertNoThrow(keyNameResult = [self.unitUnderTest keynameForSetOfDataType:userDataType],
+                            @"Unexpected exceptions are bad!");
+            STAssertNotNil(keyNameResult,
+                           @"`keyNameForDataType:` shouldn't return nil for a valid enum (%d). Please check the key name definitions in JALUserDataDictionarySpec.m. Also check validity of the enum declaration in JALUserDataDictionarySpecTests.h E.g. does it define a consecutive range of valid values, using ...StartValid and ...EndValid?",
+                           userDataType);
+            STAssertFalse([keyNameResult isEqualToString:@""],
+                          @"`keyNameForDataType:` shouldn't return an empty string for a valid enum (%d). Please check the key name definitions in JALUserDataDictionarySpec.m. Also check validity of the enum declaration in JALUserDataDictionarySpecTests.h E.g. does it define a consecutive range of valid values, using ...StartValid and ...EndValid?",
+                          userDataType);
             
-            NSLog(@"The key for enum %d is %@", userDataType, keyNameResult);
-            [allKeyNameResults addObject:keyNameResult];
+            // If the keyname is valid...
+            if (keyNameResult != nil && ![keyNameResult isEqualToString:@""]) {
+                // Make sure the name isn't already in use
+                STAssertFalse([allKeyNameResults containsObject:keyNameResult],
+                              @"Oh dear. Looks like the key name %@ has beed double defined?! Please check the key name definitions in JALUserDataDictionarySpec.m",
+                              keyNameResult);
+                
+                NSLog(@"The key for enum %d is %@", userDataType, keyNameResult);
+                [allKeyNameResults addObject:keyNameResult];
+            }
         }
+    }
+    
+    else {
+        STFail(@"Test not executed because unit under test was not initialised");
     }
 }
 
 /*!
  * Method under test:
- * - (NSString*)keyNameForDataType:(JALUserDataTypeEnum)userDataType;
- *
- * Test description:
- * Method called with the "unknown" enum value. The result is inspected.
- *
- * Expected Result:
- * Should return nil (definately not an empty string);
- *
- * We also need to check that the ...Unknown enum has the value -1,
- * because the vaild enums are the index into the array of structs.
- */
--(void)testKeyNameForDataType_unknown
-{
-    NSString* keyNameResult = nil;
-    
-    STAssertTrue(JALUserDataTypeUnknown == -1,
-                 @"Uh-oh, looks like the JALUserDataTypeEnum definition is bad. JALUserDataTypeUnknown should be -1");
-    
-    STAssertNoThrow(keyNameResult = [self.unitUnderTest keyNameForDataType:JALUserDataTypeUnknown],
-                    @"Unexpected exceptions are bad!");
-    STAssertNil(keyNameResult,
-                    @"`keyNameForDataType:` should return nil for JALUserDataTypeUnknown (%d). Please check the key name definitions in JALUserDataDictionarySpec.m",
-                   JALUserDataTypeUnknown);
-    STAssertFalse([keyNameResult isEqualToString:@""],
-                    @"`keyNameForDataType:` shouldn't return an empty string for JALUserDataTypeUnknown (%d). Please check the key name definitions in JALUserDataDictionarySpec.m",
-                   JALUserDataTypeUnknown);
-}
-
-/*!
- * Method under test:
- * - (NSString*)keyNameForDataType:(JALUserDataTypeEnum)userDataType;
+ * - (NSString*)keynameForSetOfDataType:(JALUserDataTypeEnum)userDataType;
  *
  * Test description:
  * Method called with an invalid enum value. The result is inspected.
@@ -161,15 +198,22 @@
  */
 -(void)testKeyNameForDataType_invalid
 {
-    NSString* keyNameResult = nil;
+    if (self.unitUnderTest != nil)
+    {
+        NSString* keyNameResult = nil;
+        
+        STAssertNoThrow(keyNameResult = [self.unitUnderTest keynameForSetOfDataType:INT_MIN],
+                        @"Unexpected exceptions are bad!");
+        STAssertNil(keyNameResult,
+                    @"`keyNameForDataType:` should return nil for any invalid value (eg. %ld)",
+                    INT_MIN);
+        STAssertFalse([keyNameResult isEqualToString:@""],
+                      @"`keyNameForDataType:` shouldn't return an empty string for invalid types.");
+    }
     
-    STAssertNoThrow(keyNameResult = [self.unitUnderTest keyNameForDataType:INT_MIN],
-                    @"Unexpected exceptions are bad!");
-    STAssertNil(keyNameResult,
-                @"`keyNameForDataType:` should return nil for any invalid value (eg. %ld)",
-                INT_MIN);
-    STAssertFalse([keyNameResult isEqualToString:@""],
-                  @"`keyNameForDataType:` shouldn't return an empty string for invalid types.");
+    else {
+        STFail(@"Test not executed because unit under test was not initialised");
+    }
 }
 
 @end

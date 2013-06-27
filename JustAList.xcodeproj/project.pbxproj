@@ -148,23 +148,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9B3B29E61417438A00FEC7A7 /* Protocols */ = {
+		9B3B29E7141743C600FEC7A7 /* Original Implementation */ = {
 			isa = PBXGroup;
 			children = (
 				9BE672E714115D9800BBA7B6 /* JALAppData.h */,
-			);
-			name = Protocols;
-			sourceTree = "<group>";
-		};
-		9B3B29E7141743C600FEC7A7 /* Deprecated Implementation */ = {
-			isa = PBXGroup;
-			children = (
 				9BA07DE2144585C3009DB2B6 /* JALAppDataInRAM.h */,
 				9BA07DE3144585C3009DB2B6 /* JALAppDataInRAM.m */,
 				9B3B2A8E1417E3E300FEC7A7 /* JALAppDataInRAMTests.h */,
 				9B3B2A8F1417E3E300FEC7A7 /* JALAppDataInRAMTests.m */,
 			);
-			name = "Deprecated Implementation";
+			name = "Original Implementation";
+			path = JustAList;
 			sourceTree = "<group>";
 		};
 		9B3B29E8141744CD00FEC7A7 /* Data Object Classes */ = {
@@ -183,9 +177,7 @@
 				9B501ED317765EC600DE1607 /* JALModelConstants.m */,
 				9B3B29E8141744CD00FEC7A7 /* Data Object Classes */,
 				9B51A26F1776533400038E46 /* Data Sources */,
-				9B3B29E61417438A00FEC7A7 /* Protocols */,
 				9B8E47CF1775C87500905A7F /* DataStore API */,
-				9B3B29E7141743C600FEC7A7 /* Deprecated Implementation */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -268,10 +260,8 @@
 				9B8E47C41775C7EA00905A7F /* JALDataFromFixtureClass.m */,
 				9B8E47C61775C80C00905A7F /* JALDataFromPlist.h */,
 				9B8E47C71775C80C00905A7F /* JALDataFromPlist.m */,
-				9B8E47C91775C82400905A7F /* JALDataFromCoreData.h */,
-				9B8E47CA1775C82400905A7F /* JALDataFromCoreData.m */,
-				9B8E47CC1775C85800905A7F /* JALDataFromWeb.h */,
-				9B8E47CD1775C85800905A7F /* JALDataFromWeb.m */,
+				9B3B29E7141743C600FEC7A7 /* Original Implementation */,
+				9BD9E9D6177A55A400AB43EC /* Someday Maybe */,
 			);
 			name = "DataStore API";
 			path = ..;
@@ -323,6 +313,17 @@
 				9BD8208517790C8500E63A82 /* NSException+JALExceptionTypesTest.m */,
 			);
 			name = Global;
+			sourceTree = "<group>";
+		};
+		9BD9E9D6177A55A400AB43EC /* Someday Maybe */ = {
+			isa = PBXGroup;
+			children = (
+				9B8E47C91775C82400905A7F /* JALDataFromCoreData.h */,
+				9B8E47CA1775C82400905A7F /* JALDataFromCoreData.m */,
+				9B8E47CC1775C85800905A7F /* JALDataFromWeb.h */,
+				9B8E47CD1775C85800905A7F /* JALDataFromWeb.m */,
+			);
+			name = "Someday Maybe";
 			sourceTree = "<group>";
 		};
 		9BE106A5146F121700D4487D /* PersistentDataService */ = {

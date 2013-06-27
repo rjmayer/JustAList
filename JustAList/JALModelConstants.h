@@ -8,9 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-// TODO: move this into JALMacros
-#define SIZE_OF(MY_CONSTANT_STRING_ARRAY) sizeof(MY_CONSTANT_STRING_ARRAY) / sizeof(MY_CONSTANT_STRING_ARRAY[0])
-
 // General consts
 extern NSString * const kJALPersistentDataKeyListItems;
 

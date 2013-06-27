@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 Richard Mayer. All rights reserved.
 //
 
+#import "JALConstants.h"
 #import "JALModelConstants.h"
 
 typedef enum {
