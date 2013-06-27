@@ -264,8 +264,8 @@
 				9BD9E9D6177A55A400AB43EC /* Someday Maybe */,
 			);
 			name = "DataStore API";
-			path = ..;
-			sourceTree = "<group>";
+			path = JustAList;
+			sourceTree = SOURCE_ROOT;
 		};
 		9B8E47D01775C90E00905A7F /* JALTesting */ = {
 			isa = PBXGroup;
