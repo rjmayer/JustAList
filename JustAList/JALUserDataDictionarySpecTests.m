@@ -10,11 +10,28 @@
 
 #import "JALUserDataDictionarySpec.h"
 
+// TODO: Double check the class for (valid) type test error messages
+// Ithink it's ok but finished it in a rush
+
+// TODO: add the final test, for class for invalid type
+
+// TODO: make setup only go as far as alloc, then write a seperate testInit?
+// perhaps find out first the right approach to do that
+
+// TODO: How can I force tests to run in a particular order?
+
+// TODO: put all strings int Localizable, include a macro definition to get
+// with something like ERROR_MSG_FORMAT3(SUITE, TEST, CASE, ERRTYPE)
+// NSLog([NSString stringWithFormat:ERROR_MSG_FORMAT3(SUITE, @"methodName:", @"01", @"NoThrow"), arg1, arg2, arg3])
+
+#define JALUserDataDictionarySpecTestsErrorMsg_unitUnderTest_NoThrow 
+
 ////////////////////////////////////////////////////////////////////////////////
 #pragma mark Public Interface
 ////////////////////////////////////////////////////////////////////////////////
 
 @interface JALUserDataDictionarySpecTests : SenTestCase
+-(void)testClassnameForDataType_valid;
 @end
 
 
@@ -50,6 +67,7 @@
 
 - (void)tearDown
 {
+    _unitUnderTest = nil;
     [self.unitUnderTest release];
     
     //--
@@ -258,6 +276,71 @@
                         noThrowErrorMsg);
         STAssertNil(keyNameResult,
                     [NSString stringWithFormat:notNilErrorMsgFormat, JALUserDataTypeEnumLast + 1]);
+    }
+    
+    else {
+        STFail(@"Test not executed because unit under test was not initialised");
+    }
+}
+
+/*!
+ * Method under test:
+ * - (NSString*)classnameForDataType:(JALUserDataTypeEnum)userDataType;
+ *
+ * Preconditions:
+ * testEnumAndArrayConsistency must have already passed
+ *
+ * Test Purpose:
+ * Verify that the method returns correct data, with a range of valid input.
+ *
+ * Test description:
+ * 1. Invoke with value 0
+ * 2. Invoke with values in the range JALUserDataTypeEnumFirst to
+ *    JALUserDataTypeEnumLast
+ *
+ * Considerations:
+ * The test exceeds the usual boundry value testing, because there's a
+ * potential for error for any one of the enum values (e.g. enum has been
+ * defined with non-consecutive int values).
+ *
+ * Expected Result:
+ * * In all cases, a string is returned, neither nil nor empty @""
+ * * The string is the name of a value class, that can be successfully
+ *   instanciated.
+ *
+ */
+-(void)testClassnameForDataType_valid
+{
+    if (self.unitUnderTest != nil)
+    {
+        NSString* classNameResult = nil;
+        
+        STAssertTrue(JALUserDataTypeEnumFirst == 0,
+                     @"Uh-oh, looks like the JALUserDataTypeEnum definition is bad. JALUserDataTypeEnumStartValid should be = 0, followed by all the other valid ones. JALUserDataTypeUnknown should be -1");
+        
+        for (JALUserDataTypeEnum userDataType = JALUserDataTypeEnumFirst;
+             userDataType <= JALUserDataTypeEnumLast;
+             ++userDataType)
+        {
+            STAssertNoThrow(classNameResult = [self.unitUnderTest classnameForDataType:userDataType],
+                            @"Unexpected exceptions are bad!");
+            STAssertNotNil(classNameResult,
+                           @"`classnameForDataType:` shouldn't return nil for a valid enum (%d). Please check the key name definitions in JALUserDataDictionarySpec.m. Also check validity of the enum declaration in JALUserDataDictionarySpecTests.h E.g. does it define a consecutive range of valid values, using ...StartValid and ...EndValid?",
+                           userDataType);
+            STAssertFalse([classNameResult isEqualToString:@""],
+                          @"`classnameForDataType:` shouldn't return an empty string for a valid enum (%d). Please check the key name definitions in JALUserDataDictionarySpec.m. Also check validity of the enum declaration in JALUserDataDictionarySpecTests.h E.g. does it define a consecutive range of valid values, using ...StartValid and ...EndValid?",
+                          userDataType);
+            
+            // If the class name is valid...
+            if (classNameResult != nil && ![classNameResult isEqualToString:@""]) {                
+                NSLog(@"The class for enum %d is %@", userDataType, classNameResult);
+                // Check that it can be instantiated properly
+                id obj;
+                STAssertNoThrow(obj = [NSClassFromString(classNameResult) alloc] , @"Unexpected exception whilst trying to alloc the class %@", classNameResult);
+                NSLog(@"And here's an instance of it: %@", obj);
+                STAssertNotNil(obj, @"Failed to init the class %@ properly. Does a class with that name really exist?", obj);
+            }
+        }
     }
     
     else {
