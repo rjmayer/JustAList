@@ -51,6 +51,16 @@
 		9BE672EA14115DBA00BBA7B6 /* JALListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE672E914115DBA00BBA7B6 /* JALListItem.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		9B4FAEB2177E41A000DA6DEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BE6728C14110C6B00BBA7B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9BC5C22F177508040090A6C1;
+			remoteInfo = LogicTests;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		9B2CF0511427CBFB0003D3B9 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		9B3B29B71416BF4E00FEC7A7 /* ClassMap.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ClassMap.plist; sourceTree = "<group>"; };
@@ -69,14 +79,14 @@
 		9B3B29C61416BF4E00FEC7A7 /* NSDictionary+Plist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Plist.m"; sourceTree = "<group>"; };
 		9B3B29C71416BF4E00FEC7A7 /* RJMDataFacade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJMDataFacade.h; sourceTree = "<group>"; };
 		9B3B29C81416BF4E00FEC7A7 /* RJMDataFacade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RJMDataFacade.m; sourceTree = "<group>"; };
-		9B3B2A8E1417E3E300FEC7A7 /* JALAppDataInRAMTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JALAppDataInRAMTests.h; path = ../ComponentTests/JALAppDataInRAMTests.h; sourceTree = "<group>"; };
-		9B3B2A8F1417E3E300FEC7A7 /* JALAppDataInRAMTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JALAppDataInRAMTests.m; path = ../ComponentTests/JALAppDataInRAMTests.m; sourceTree = "<group>"; };
+		9B3B2A8E1417E3E300FEC7A7 /* JALAppDataInRAMTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JALAppDataInRAMTests.h; path = LogicTests/JALAppDataInRAMTests.h; sourceTree = SOURCE_ROOT; };
+		9B3B2A8F1417E3E300FEC7A7 /* JALAppDataInRAMTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JALAppDataInRAMTests.m; path = LogicTests/JALAppDataInRAMTests.m; sourceTree = SOURCE_ROOT; };
 		9B501ED0177659BB00DE1607 /* JALCustomUserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JALCustomUserData.m; sourceTree = "<group>"; };
 		9B501ED217765EC600DE1607 /* JALModelConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JALModelConstants.h; sourceTree = "<group>"; };
 		9B501ED317765EC600DE1607 /* JALModelConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JALModelConstants.m; sourceTree = "<group>"; };
 		9B501ED61776717A00DE1607 /* JALDefaultUserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JALDefaultUserData.m; sourceTree = "<group>"; };
 		9B501ED81777236000DE1607 /* JALDefaultUserData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JALDefaultUserData.h; sourceTree = "<group>"; };
-		9B501EDA1777296C00DE1607 /* JALDefaultUserDataTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JALDefaultUserDataTests.m; path = ComponentTests/JALDefaultUserDataTests.m; sourceTree = SOURCE_ROOT; };
+		9B501EDA1777296C00DE1607 /* JALDefaultUserDataTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JALDefaultUserDataTests.m; path = LogicTests/JALDefaultUserDataTests.m; sourceTree = SOURCE_ROOT; };
 		9B7B8C38144641ED00D06ED3 /* RJMPersistentDataServiceForFileProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJMPersistentDataServiceForFileProtocol.h; sourceTree = "<group>"; };
 		9B7B8C3A144646F400D06ED3 /* JALAppDataStorageMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JALAppDataStorageMock.h; sourceTree = "<group>"; };
 		9B7B8C3B144646F400D06ED3 /* JALAppDataStorageMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JALAppDataStorageMock.m; sourceTree = "<group>"; };
@@ -90,17 +100,17 @@
 		9B8E47CD1775C85800905A7F /* JALDataFromWeb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JALDataFromWeb.m; sourceTree = "<group>"; };
 		9BA07DE2144585C3009DB2B6 /* JALAppDataInRAM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JALAppDataInRAM.h; sourceTree = "<group>"; };
 		9BA07DE3144585C3009DB2B6 /* JALAppDataInRAM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JALAppDataInRAM.m; sourceTree = "<group>"; };
-		9BAC4F6A14116A84003500F6 /* JALAppDataMockTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JALAppDataMockTests.h; sourceTree = "<group>"; };
-		9BAC4F6B14116A84003500F6 /* JALAppDataMockTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JALAppDataMockTests.m; sourceTree = "<group>"; };
+		9BAC4F6A14116A84003500F6 /* JALAppDataMockTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JALAppDataMockTests.h; path = ../LogicTests/JALAppDataMockTests.h; sourceTree = "<group>"; };
+		9BAC4F6B14116A84003500F6 /* JALAppDataMockTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JALAppDataMockTests.m; path = LogicTests/JALAppDataMockTests.m; sourceTree = SOURCE_ROOT; };
 		9BAD7034144D72D8000D717C /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
-		9BC5C230177508040090A6C1 /* ComponentTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ComponentTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9BC5C236177508040090A6C1 /* ComponentTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ComponentTests-Info.plist"; sourceTree = "<group>"; };
+		9BC5C230177508040090A6C1 /* LogicTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogicTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BC5C236177508040090A6C1 /* LogicTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LogicTests-Info.plist"; sourceTree = "<group>"; };
 		9BC5C238177508040090A6C1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		9BC5C23D177508040090A6C1 /* ComponentTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ComponentTests-Prefix.pch"; sourceTree = "<group>"; };
+		9BC5C23D177508040090A6C1 /* LogicTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LogicTests-Prefix.pch"; sourceTree = "<group>"; };
 		9BD8207F1779024F00E63A82 /* NSException+JALExceptionTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSException+JALExceptionTypes.h"; sourceTree = "<group>"; };
 		9BD820801779024F00E63A82 /* NSException+JALExceptionTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSException+JALExceptionTypes.m"; sourceTree = "<group>"; };
-		9BD8208417790C8500E63A82 /* NSException+JALExceptionTypesTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSException+JALExceptionTypesTest.h"; path = "ComponentTests/NSException+JALExceptionTypesTest.h"; sourceTree = SOURCE_ROOT; };
-		9BD8208517790C8500E63A82 /* NSException+JALExceptionTypesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSException+JALExceptionTypesTest.m"; path = "ComponentTests/NSException+JALExceptionTypesTest.m"; sourceTree = SOURCE_ROOT; };
+		9BD8208517790C8500E63A82 /* NSException+JALExceptionTypesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSException+JALExceptionTypesTest.m"; path = "LogicTests/NSException+JALExceptionTypesTest.m"; sourceTree = SOURCE_ROOT; };
+		9BD8AB29177E3EDF000A3295 /* NSException+JALExceptionTypesTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSException+JALExceptionTypesTest.h"; path = "LogicTests/NSException+JALExceptionTypesTest.h"; sourceTree = SOURCE_ROOT; };
 		9BD9E9D0177A263900AB43EC /* JALUserDataDictionarySpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JALUserDataDictionarySpec.h; sourceTree = "<group>"; };
 		9BD9E9D1177A263900AB43EC /* JALUserDataDictionarySpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JALUserDataDictionarySpec.m; sourceTree = "<group>"; };
 		9BD9E9D4177A297800AB43EC /* JALUserDataDictionarySpecTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JALUserDataDictionarySpecTests.m; sourceTree = "<group>"; };
@@ -159,7 +169,7 @@
 			);
 			name = "Original Implementation";
 			path = JustAList;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		9B3B29E8141744CD00FEC7A7 /* Data Object Classes */ = {
 			isa = PBXGroup;
@@ -284,21 +294,21 @@
 			path = ComponentTests;
 			sourceTree = SOURCE_ROOT;
 		};
-		9BC5C234177508040090A6C1 /* ComponentTests */ = {
+		9BC5C234177508040090A6C1 /* LogicTests */ = {
 			isa = PBXGroup;
 			children = (
 				9BAD7034144D72D8000D717C /* README.txt */,
 				9BC5C235177508040090A6C1 /* Supporting Files */,
 			);
-			path = ComponentTests;
-			sourceTree = "<group>";
+			path = LogicTests;
+			sourceTree = SOURCE_ROOT;
 		};
 		9BC5C235177508040090A6C1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				9BC5C236177508040090A6C1 /* ComponentTests-Info.plist */,
+				9BC5C236177508040090A6C1 /* LogicTests-Info.plist */,
 				9BC5C237177508040090A6C1 /* InfoPlist.strings */,
-				9BC5C23D177508040090A6C1 /* ComponentTests-Prefix.pch */,
+				9BC5C23D177508040090A6C1 /* LogicTests-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -309,7 +319,7 @@
 				9B3B29BC1416BF4E00FEC7A7 /* JALConstants.h */,
 				9BD8207F1779024F00E63A82 /* NSException+JALExceptionTypes.h */,
 				9BD820801779024F00E63A82 /* NSException+JALExceptionTypes.m */,
-				9BD8208417790C8500E63A82 /* NSException+JALExceptionTypesTest.h */,
+				9BD8AB29177E3EDF000A3295 /* NSException+JALExceptionTypesTest.h */,
 				9BD8208517790C8500E63A82 /* NSException+JALExceptionTypesTest.m */,
 			);
 			name = Global;
@@ -340,7 +350,7 @@
 			isa = PBXGroup;
 			children = (
 				9BE6729F14110C6B00BBA7B6 /* JustAList */,
-				9BC5C234177508040090A6C1 /* ComponentTests */,
+				9BC5C234177508040090A6C1 /* LogicTests */,
 				9BE6729814110C6B00BBA7B6 /* Frameworks */,
 				9BE6729614110C6B00BBA7B6 /* Products */,
 			);
@@ -350,7 +360,7 @@
 			isa = PBXGroup;
 			children = (
 				9BE6729514110C6B00BBA7B6 /* JustAList.app */,
-				9BC5C230177508040090A6C1 /* ComponentTests.octest */,
+				9BC5C230177508040090A6C1 /* LogicTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -398,9 +408,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9BC5C22F177508040090A6C1 /* ComponentTests */ = {
+		9BC5C22F177508040090A6C1 /* LogicTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9BC5C23E177508040090A6C1 /* Build configuration list for PBXNativeTarget "ComponentTests" */;
+			buildConfigurationList = 9BC5C23E177508040090A6C1 /* Build configuration list for PBXNativeTarget "LogicTests" */;
 			buildPhases = (
 				9BC5C22B177508040090A6C1 /* Sources */,
 				9BC5C22C177508040090A6C1 /* Frameworks */,
@@ -411,9 +421,9 @@
 			);
 			dependencies = (
 			);
-			name = ComponentTests;
+			name = LogicTests;
 			productName = "JAL-ComponentTests";
-			productReference = 9BC5C230177508040090A6C1 /* ComponentTests.octest */;
+			productReference = 9BC5C230177508040090A6C1 /* LogicTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 		9BE6729414110C6B00BBA7B6 /* JustAList */ = {
@@ -427,6 +437,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				9B4FAEB3177E41A000DA6DEB /* PBXTargetDependency */,
 			);
 			name = JustAList;
 			productName = JustAList;
@@ -456,7 +467,7 @@
 			projectRoot = "";
 			targets = (
 				9BE6729414110C6B00BBA7B6 /* JustAList */,
-				9BC5C22F177508040090A6C1 /* ComponentTests */,
+				9BC5C22F177508040090A6C1 /* LogicTests */,
 			);
 		};
 /* End PBXProject section */
@@ -547,6 +558,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		9B4FAEB3177E41A000DA6DEB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9BC5C22F177508040090A6C1 /* LogicTests */;
+			targetProxy = 9B4FAEB2177E41A000DA6DEB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		9B3B29B81416BF4E00FEC7A7 /* JALListView.xib */ = {
 			isa = PBXVariantGroup;
@@ -602,13 +621,13 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 1;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ComponentTests/ComponentTests-Prefix.pch";
+				GCC_PREFIX_HEADER = "LogicTests/LogicTests-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				INFOPLIST_FILE = "ComponentTests/ComponentTests-Info.plist";
+				INFOPLIST_FILE = "LogicTests/LogicTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -633,9 +652,9 @@
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ComponentTests/ComponentTests-Prefix.pch";
+				GCC_PREFIX_HEADER = "LogicTests/LogicTests-Prefix.pch";
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				INFOPLIST_FILE = "ComponentTests/ComponentTests-Info.plist";
+				INFOPLIST_FILE = "LogicTests/LogicTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_AFTER_BUILD = NO;
@@ -730,7 +749,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9BC5C23E177508040090A6C1 /* Build configuration list for PBXNativeTarget "ComponentTests" */ = {
+		9BC5C23E177508040090A6C1 /* Build configuration list for PBXNativeTarget "LogicTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9BC5C23F177508040090A6C1 /* Debug */,

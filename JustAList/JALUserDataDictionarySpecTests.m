@@ -10,9 +10,6 @@
 
 #import "JALUserDataDictionarySpec.h"
 
-// TODO: make setup only go as far as alloc, then write a seperate testInit?
-// perhaps find out first the right approach to do that
-
 // TODO: How can I force tests to run in a particular order?
 
 // TODO: put all strings int Localizable, include a macro definition to get
