@@ -61,6 +61,37 @@
 #pragma mark Tests
 //---------------------------
 
+/*!
+ * Method under test:
+ * - (id)init;
+ *
+ * Preconditions:
+ * The object under test has been instantiated, without unexpected behaviour.
+ *
+ * Test Purpose:
+ * It's not so much about testing `init`, but rather validating declarations and
+ * the hardcoded constants of the class itself. This is a precondition for all 
+ * other tests in the suite, which will likely fail if the underlying data 
+ * structures have'nt been correctly defined. 
+ *
+ * Furthermore, it's exactly this aspect of the class (as opposed to the actual
+ * methods) that is most prone to human error. E.g a new data-type enumeration 
+ * defined, description added to struct array, but the dev forgets to update the
+ * array size #define.
+ *
+ * Test Description:
+ * 1. Verify that the JALUserDataTypeEnum contains two helper 'aliases';
+ *    JALUserDataTypeEnumFirst (with int value 0) and
+ *    JALUserDataTypeEnumLast (with int value 0 or greater)
+ * 2. Verify that the 'implicitly' defined enumeration count (delta First..Last)
+ *    matches the 'explicitly' defined count (USER_DATA_TYPE_ENUMS_COUNT)
+ * 3. Verify that the 'explicitly' defined enumeration count
+ *    (USER_DATA_TYPE_ENUMS_COUNT) matches the actual size of the struct array[]
+ *
+ * Expected Result:
+ * All verifications should hould true, without unexpected behaviour. 
+ *
+ */
 -(void)testEnumAndArrayConsistency
 {
     if (self.unitUnderTest != nil)
@@ -94,7 +125,7 @@
                 NSLog(@"JALUserDataTypeEnum enum %d has the value %d", userDataTypeCount-1, userDataType);
             }
             
-            isEnumCountDeclarationValidated = (userDataTypeCount = USER_DATA_TYPE_ENUMS_COUNT);
+            isEnumCountDeclarationValidated = (userDataTypeCount == USER_DATA_TYPE_ENUMS_COUNT);
             STAssertTrue(isEnumCountDeclarationValidated,
                          @"The object under test declares %d types (USER_DATA_TYPE_ENUMS_COUNT), but between JALUserDataTypeEnumFirst (%d) and JALUserDataTypeEnumLast (%d) there are %d enumerations. Perhaps someone forgot to update USER_DATA_TYPE_ENUMS_COUNT or the First/Last aliases are incorrect?", USER_DATA_TYPE_ENUMS_COUNT, JALUserDataTypeEnumFirst, JALUserDataTypeEnumLast, JALUserDataTypeEnumLast-JALUserDataTypeEnumFirst+1);
         }
@@ -126,22 +157,26 @@
  * Method under test:
  * - (NSString*)keynameForSetOfDataType:(JALUserDataTypeEnum)userDataType;
  *
+ * Preconditions:
+ * testEnumAndArrayConsistency must have already passed
+ *
+ * Test Purpose:
+ * Verify that the method returns correct data, with a range of valid input.
+ *
  * Test description:
- * Method called with all valid enum values for userDataType. The result
- * (an NSString) is inspected.
+ * 1. Invoke with value 0
+ * 2. Invoke with values in the range JALUserDataTypeEnumFirst to 
+ *    JALUserDataTypeEnumLast
+ *
+ * Considerations:
+ * The test exceeds the usual boundry value testing, because there's a
+ * potential for error for any one of the enum values (e.g. enum has been
+ * defined with non-consecutive int values). Also, testing every value explictly
+ * allows to check for non-exclusive key names.
  *
  * Expected Result:
- * Although technically possible to hardcode the expected result (based on the
- * current valid requirements), that would make for a brittle test. Better to
- * write them to the test log, for verification and do a rudimentary check
- * that all strings are unique and not nil.
- *
- * We also need to check that the ...StartValid enum has the value 0,
- * because the vaild enums are the index into the array of structs.
- *
- * The test isn't really that critical, because the UserDataDictionarySpec is 
- * *the* reference written spec, against which everything else is implemented, 
- * so we can and should only test it's consistency.
+ * * In all cases, a string is returned, neither nil nor empty @""
+ * * No two strings are equal (key names are mutually exclusive)
  *
  */
 -(void)testKeyNameForDataType_valid
@@ -189,26 +224,40 @@
  * Method under test:
  * - (NSString*)keynameForSetOfDataType:(JALUserDataTypeEnum)userDataType;
  *
+ * Preconditions:
+ * testEnumAndArrayConsistency must have already passed
+ *
+ * Test Purpose:
+ * Invalid input data handled correctly (robustness)
+ *
  * Test description:
- * Method called with an invalid enum value. The result is inspected.
+ * 1. Invoke with value JALUserDataTypeEnumFirst - 1
+ * 2. Invoke with value JALUserDataTypeEnumLast + 1
  *
  * Expected Result:
- * Should raise an exception;
+ * * No exception is raised in the object under test
+ * * Return value 'nil'
  *
  */
 -(void)testKeyNameForDataType_invalid
 {
     if (self.unitUnderTest != nil)
     {
+        NSString* noThrowErrorMsg = @"Unexpected exceptions are bad!";
+        NSString* notNilErrorMsgFormat = @"`keyNameForDataType:` should return nil for the invalid value of %ld";
         NSString* keyNameResult = nil;
         
-        STAssertNoThrow(keyNameResult = [self.unitUnderTest keynameForSetOfDataType:INT_MIN],
-                        @"Unexpected exceptions are bad!");
+        // Test below boundary
+        STAssertNoThrow(keyNameResult = [self.unitUnderTest keynameForSetOfDataType:JALUserDataTypeEnumFirst - 1],
+                        noThrowErrorMsg);
         STAssertNil(keyNameResult,
-                    @"`keyNameForDataType:` should return nil for any invalid value (eg. %ld)",
-                    INT_MIN);
-        STAssertFalse([keyNameResult isEqualToString:@""],
-                      @"`keyNameForDataType:` shouldn't return an empty string for invalid types.");
+                    [NSString stringWithFormat:notNilErrorMsgFormat, JALUserDataTypeEnumFirst - 1]);
+        
+        // Test above boundary
+        STAssertNoThrow(keyNameResult = [self.unitUnderTest keynameForSetOfDataType:JALUserDataTypeEnumLast + 1],
+                        noThrowErrorMsg);
+        STAssertNil(keyNameResult,
+                    [NSString stringWithFormat:notNilErrorMsgFormat, JALUserDataTypeEnumLast + 1]);
     }
     
     else {
