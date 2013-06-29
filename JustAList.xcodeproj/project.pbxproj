@@ -100,7 +100,7 @@
 		9B8E47CD1775C85800905A7F /* JALDataFromWeb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JALDataFromWeb.m; sourceTree = "<group>"; };
 		9BA07DE2144585C3009DB2B6 /* JALAppDataInRAM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JALAppDataInRAM.h; sourceTree = "<group>"; };
 		9BA07DE3144585C3009DB2B6 /* JALAppDataInRAM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JALAppDataInRAM.m; sourceTree = "<group>"; };
-		9BAC4F6A14116A84003500F6 /* JALAppDataMockTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JALAppDataMockTests.h; path = ../LogicTests/JALAppDataMockTests.h; sourceTree = "<group>"; };
+		9BAC4F6A14116A84003500F6 /* JALAppDataMockTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JALAppDataMockTests.h; path = LogicTests/JALAppDataMockTests.h; sourceTree = SOURCE_ROOT; };
 		9BAC4F6B14116A84003500F6 /* JALAppDataMockTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JALAppDataMockTests.m; path = LogicTests/JALAppDataMockTests.m; sourceTree = SOURCE_ROOT; };
 		9BAD7034144D72D8000D717C /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		9BC5C230177508040090A6C1 /* LogicTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogicTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };

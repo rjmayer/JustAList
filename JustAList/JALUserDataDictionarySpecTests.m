@@ -23,7 +23,6 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 @interface JALUserDataDictionarySpecTests : SenTestCase
--(void)testClassnameForDataType_valid;
 @end
 
 
