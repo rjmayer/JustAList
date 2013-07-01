@@ -63,6 +63,7 @@
 
 /* Begin PBXFileReference section */
 		9B2CF0511427CBFB0003D3B9 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		9B3B09F117822E0C000AC7B1 /* JALTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JALTypes.h; sourceTree = "<group>"; };
 		9B3B29B71416BF4E00FEC7A7 /* ClassMap.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ClassMap.plist; sourceTree = "<group>"; };
 		9B3B29B91416BF4E00FEC7A7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/JALListView.xib; sourceTree = "<group>"; };
 		9B3B29BA1416BF4E00FEC7A7 /* JALAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JALAppDelegate.h; sourceTree = "<group>"; };
@@ -110,7 +111,6 @@
 		9BD8207F1779024F00E63A82 /* NSException+JALExceptionTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSException+JALExceptionTypes.h"; sourceTree = "<group>"; };
 		9BD820801779024F00E63A82 /* NSException+JALExceptionTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSException+JALExceptionTypes.m"; sourceTree = "<group>"; };
 		9BD8208517790C8500E63A82 /* NSException+JALExceptionTypesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSException+JALExceptionTypesTest.m"; path = "LogicTests/NSException+JALExceptionTypesTest.m"; sourceTree = SOURCE_ROOT; };
-		9BD8AB29177E3EDF000A3295 /* NSException+JALExceptionTypesTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSException+JALExceptionTypesTest.h"; path = "LogicTests/NSException+JALExceptionTypesTest.h"; sourceTree = SOURCE_ROOT; };
 		9BD9E9D0177A263900AB43EC /* JALUserDataDictionarySpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JALUserDataDictionarySpec.h; sourceTree = "<group>"; };
 		9BD9E9D1177A263900AB43EC /* JALUserDataDictionarySpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JALUserDataDictionarySpec.m; sourceTree = "<group>"; };
 		9BD9E9D4177A297800AB43EC /* JALUserDataDictionarySpecTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JALUserDataDictionarySpecTests.m; sourceTree = "<group>"; };
@@ -232,14 +232,14 @@
 			children = (
 				9BD9E9D0177A263900AB43EC /* JALUserDataDictionarySpec.h */,
 				9BD9E9D1177A263900AB43EC /* JALUserDataDictionarySpec.m */,
-				9BD9E9D4177A297800AB43EC /* JALUserDataDictionarySpecTests.m */,
 				9B501ED81777236000DE1607 /* JALDefaultUserData.h */,
 				9B501ED61776717A00DE1607 /* JALDefaultUserData.m */,
 				9B501EDA1777296C00DE1607 /* JALDefaultUserDataTests.m */,
 				9B501ED0177659BB00DE1607 /* JALCustomUserData.m */,
 			);
 			name = "Data Sources";
-			sourceTree = "<group>";
+			path = JustAList;
+			sourceTree = SOURCE_ROOT;
 		};
 		9B7B8C391446469000D06ED3 /* Mock */ = {
 			isa = PBXGroup;
@@ -297,6 +297,8 @@
 		9BC5C234177508040090A6C1 /* LogicTests */ = {
 			isa = PBXGroup;
 			children = (
+				9BD9E9D4177A297800AB43EC /* JALUserDataDictionarySpecTests.m */,
+				9BD8208517790C8500E63A82 /* NSException+JALExceptionTypesTest.m */,
 				9BAD7034144D72D8000D717C /* README.txt */,
 				9BC5C235177508040090A6C1 /* Supporting Files */,
 			);
@@ -316,11 +318,10 @@
 		9BD82087177917CE00E63A82 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				9B3B09F117822E0C000AC7B1 /* JALTypes.h */,
 				9B3B29BC1416BF4E00FEC7A7 /* JALConstants.h */,
 				9BD8207F1779024F00E63A82 /* NSException+JALExceptionTypes.h */,
 				9BD820801779024F00E63A82 /* NSException+JALExceptionTypes.m */,
-				9BD8AB29177E3EDF000A3295 /* NSException+JALExceptionTypesTest.h */,
-				9BD8208517790C8500E63A82 /* NSException+JALExceptionTypesTest.m */,
 			);
 			name = Global;
 			sourceTree = "<group>";

@@ -6,9 +6,13 @@
 //  Copyright (c) 2013 Richard Mayer. All rights reserved.
 //
 
-#import "NSException+JALExceptionTypesTest.h"
+#import <SenTestingKit/SenTestingKit.h>
 
 #import "NSException+JALExceptionTypes.h"
+
+@interface NSException_JALExceptionTypesTests : SenTestCase
+
+@end
 
 @implementation NSException_JALExceptionTypesTests
 

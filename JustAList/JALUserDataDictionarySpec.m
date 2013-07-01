@@ -18,6 +18,8 @@ const JALUserDataTypeStruct kJALUserDataCollections [] =
         @"JALUserDataTypeListItem",       @"JALListItem"}
 };
 
+// TODO: turn enumCount into a property, in order to stub it for testing the
+// exception
 
 @implementation JALUserDataDictionarySpec
 
@@ -28,11 +30,7 @@ const JALUserDataTypeStruct kJALUserDataCollections [] =
     // Perform self check on declaration consistency (pre-condition is
     // declaration of the enumeration helpers)
     NSUInteger enumCount = JALUserDataTypeEnumLast - JALUserDataTypeEnumFirst + 1;
-    if (enumCount != USER_DATA_TYPE_ENUMS_COUNT) {
-        [NSException raise:@"NSDictionaryAsConst declaration error"
-                    format:@"The #define USER_DATA_TYPE_ENUMS_COUNT declares %d types, but there are %d enums defined, between FruitTypeFirst (%d) and FruitTypeLast (%d)",
-         USER_DATA_TYPE_ENUMS_COUNT, enumCount, JALUserDataTypeEnumFirst, JALUserDataTypeEnumLast];
-    }
+    [self validateTheResolvedEnumCount:enumCount];
 	
 	return self;
 }
@@ -63,6 +61,17 @@ const JALUserDataTypeStruct kJALUserDataCollections [] =
     }
     
     return ret;
+}
+
+#pragma mark Helpers
+// This is abstracted out as a helper in order to test (using a partial mock)
+- (void)validateTheResolvedEnumCount:(NSUInteger)enumCount
+{
+    if (enumCount != USER_DATA_TYPE_ENUMS_COUNT) {
+        [NSException raise:@"NSDictionaryAsConst declaration error"
+                    format:@"The #define USER_DATA_TYPE_ENUMS_COUNT declares %d types, but there are %d enums defined, between JALUserDataTypeEnumFirst (%d) and JALUserDataTypeEnumLast (%d). In the case of a disproportianately large number of enums, please verify that the enums take consecutive integer values.",
+         USER_DATA_TYPE_ENUMS_COUNT, enumCount, JALUserDataTypeEnumFirst, JALUserDataTypeEnumLast];
+    }
 }
 
 @end
