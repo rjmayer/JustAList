@@ -6,6 +6,14 @@
 //  Copyright (c) 2013 Richard Mayer. All rights reserved.
 //
 
+// TODO: Simplify this, because it's huge overkill for what I need.
+// The techniques is maybe OK with 3 or 4 strings or more or with nested
+// structs but in this concrete case I can just use normal consts in the
+// JALUserDataDictionarySpec and save myself one whole shitload of testing and
+// even exception handling
+// - kUserDataDictionaryObjectTypeListItemKey
+// - kUserDataDictionaryObjectTypeListItemClass
+
 // Enumeration of possible user data sets that can be generated
 typedef enum {
     // -------------------------------------------------------------------------

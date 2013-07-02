@@ -67,6 +67,7 @@ const JALUserDataTypeStruct kJALUserDataCollections [] =
 // This is abstracted out as a helper in order to test (using a partial mock)
 - (void)validateTheResolvedEnumCount:(NSUInteger)enumCount
 {
+    // TODO: get the name (only) from JAL types (same as for a class)
     if (enumCount != USER_DATA_TYPE_ENUMS_COUNT) {
         [NSException raise:@"NSDictionaryAsConst declaration error"
                     format:@"The #define USER_DATA_TYPE_ENUMS_COUNT declares %d types, but there are %d enums defined, between JALUserDataTypeEnumFirst (%d) and JALUserDataTypeEnumLast (%d). In the case of a disproportianately large number of enums, please verify that the enums take consecutive integer values.",
