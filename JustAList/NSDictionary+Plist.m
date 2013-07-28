@@ -22,7 +22,6 @@
 										  format:&format errorDescription:&errorDesc]; 
 	if (!temp) { 
 		NSLog(@"%@", errorDesc); 
-		[errorDesc release]; 
 	}
 	
 	return temp;

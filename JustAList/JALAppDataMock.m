@@ -12,7 +12,7 @@
 
 @interface JALAppDataMock ()
 
-@property (nonatomic, retain) NSMutableSet* listItems;
+@property (nonatomic, strong) NSMutableSet* listItems;
 
 @end
 
@@ -30,7 +30,7 @@ const int kNumTestObjects = 11;
     self.listItems = [NSMutableSet setWithCapacity:kNumTestObjects];
     
     for (int i=0; i<kNumTestObjects; i++) {
-        JALListItem* listItem = [[[JALListItem alloc] init] autorelease];
+        JALListItem* listItem = [[JALListItem alloc] init];
         // set id
         listItem.identifier = i;
         // set name
@@ -46,11 +46,6 @@ const int kNumTestObjects = 11;
     return self;
 }
 
-- (void)dealloc
-{
-    self.listItems = nil;
-    [super dealloc];
-}
 
 
 #pragma mark - JALAppData Protocol

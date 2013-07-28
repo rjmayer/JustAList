@@ -12,7 +12,6 @@
 		9B22C2EA17A5A7D20051E58B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE6729914110C6B00BBA7B6 /* UIKit.framework */; };
 		9B22C2EB17A5A7D20051E58B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE6729B14110C6B00BBA7B6 /* Foundation.framework */; };
 		9B22C2F117A5A7D20051E58B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9B22C2EF17A5A7D20051E58B /* InfoPlist.strings */; };
-		9B22C32317A5B1BA0051E58B /* JALListViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB20548178A2F6000D93557 /* JALListViewControllerTests.m */; };
 		9B3B29C91416BF4E00FEC7A7 /* ClassMap.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B3B29B71416BF4E00FEC7A7 /* ClassMap.plist */; };
 		9B3B29CA1416BF4E00FEC7A7 /* JALListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B3B29B81416BF4E00FEC7A7 /* JALListView.xib */; };
 		9B3B29CB1416BF4E00FEC7A7 /* JALAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3B29BB1416BF4E00FEC7A7 /* JALAppDelegate.m */; };
@@ -39,6 +38,9 @@
 		9BA07DE4144585C3009DB2B6 /* JALAppDataInRAM.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA07DE3144585C3009DB2B6 /* JALAppDataInRAM.m */; };
 		9BB2054A178A3BC100D93557 /* JALListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3B29C21416BF4E00FEC7A7 /* JALListViewController.m */; };
 		9BB2054B178A3BC100D93557 /* JALListViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3B29C41416BF4E00FEC7A7 /* JALListViewDataSource.m */; };
+		9BB53F1517A5BE43004D2D60 /* JALListViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB20548178A2F6000D93557 /* JALListViewControllerTests.m */; };
+		9BB53F1817A5BEC6004D2D60 /* ApplicationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB53F1717A5BEC6004D2D60 /* ApplicationTests.m */; };
+		9BB53F1917A5C84A004D2D60 /* JALAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3B29BB1416BF4E00FEC7A7 /* JALAppDelegate.m */; };
 		9BC5C231177508040090A6C1 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B2CF0511427CBFB0003D3B9 /* SenTestingKit.framework */; };
 		9BC5C232177508040090A6C1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE6729914110C6B00BBA7B6 /* UIKit.framework */; };
 		9BC5C233177508040090A6C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE6729B14110C6B00BBA7B6 /* Foundation.framework */; };
@@ -123,6 +125,7 @@
 		9BAC4F6A14116A84003500F6 /* JALAppDataMockTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JALAppDataMockTests.h; path = LogicTests/JALAppDataMockTests.h; sourceTree = SOURCE_ROOT; };
 		9BAC4F6B14116A84003500F6 /* JALAppDataMockTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JALAppDataMockTests.m; path = LogicTests/JALAppDataMockTests.m; sourceTree = SOURCE_ROOT; };
 		9BB20548178A2F6000D93557 /* JALListViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JALListViewControllerTests.m; sourceTree = "<group>"; };
+		9BB53F1717A5BEC6004D2D60 /* ApplicationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationTests.m; sourceTree = "<group>"; };
 		9BC5C230177508040090A6C1 /* LogicTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogicTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BC5C236177508040090A6C1 /* LogicTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LogicTests-Info.plist"; sourceTree = "<group>"; };
 		9BC5C238177508040090A6C1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -184,8 +187,8 @@
 		9B22C2EC17A5A7D20051E58B /* ApplicationTests */ = {
 			isa = PBXGroup;
 			children = (
-				9BB2054D178A410E00D93557 /* Controller */,
 				9B22C2ED17A5A7D20051E58B /* Supporting Files */,
+				9BB53F1717A5BEC6004D2D60 /* ApplicationTests.m */,
 			);
 			path = ApplicationTests;
 			sourceTree = "<group>";
@@ -375,14 +378,14 @@
 				9BB20548178A2F6000D93557 /* JALListViewControllerTests.m */,
 			);
 			name = Controller;
-			path = ../LogicTests;
 			sourceTree = "<group>";
 		};
 		9BC5C234177508040090A6C1 /* LogicTests */ = {
 			isa = PBXGroup;
 			children = (
-				9BB2054C178A410600D93557 /* Model */,
 				9BC5C235177508040090A6C1 /* Supporting Files */,
+				9BB2054C178A410600D93557 /* Model */,
+				9BB2054D178A410E00D93557 /* Controller */,
 			);
 			path = LogicTests;
 			sourceTree = SOURCE_ROOT;
@@ -463,6 +466,7 @@
 		9BE6729F14110C6B00BBA7B6 /* JustAList */ = {
 			isa = PBXGroup;
 			children = (
+				9BE672A014110C6B00BBA7B6 /* Supporting Files */,
 				9B3B29BA1416BF4E00FEC7A7 /* JALAppDelegate.h */,
 				9B3B29BB1416BF4E00FEC7A7 /* JALAppDelegate.m */,
 				9BD82087177917CE00E63A82 /* Global */,
@@ -471,7 +475,6 @@
 				9B3B29EA141757C500FEC7A7 /* Controller */,
 				9B3B29EC1417585B00FEC7A7 /* Library */,
 				9B7B8C391446469000D06ED3 /* Mock */,
-				9BE672A014110C6B00BBA7B6 /* Supporting Files */,
 			);
 			path = JustAList;
 			sourceTree = "<group>";
@@ -640,7 +643,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B22C32317A5B1BA0051E58B /* JALListViewControllerTests.m in Sources */,
+				9BB53F1817A5BEC6004D2D60 /* ApplicationTests.m in Sources */,
+				9BB53F1917A5C84A004D2D60 /* JALAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -656,6 +660,7 @@
 				9BB2054A178A3BC100D93557 /* JALListViewController.m in Sources */,
 				9BB2054B178A3BC100D93557 /* JALListViewDataSource.m in Sources */,
 				9B00D94817A490D300B60EDA /* JALHardcodedDataDefaultTests.m in Sources */,
+				9BB53F1517A5BE43004D2D60 /* JALListViewControllerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -771,6 +776,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				INFOPLIST_FILE = "ApplicationTests/ApplicationTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
@@ -801,6 +807,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ApplicationTests/ApplicationTests-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				INFOPLIST_FILE = "ApplicationTests/ApplicationTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
@@ -817,6 +824,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
@@ -835,6 +843,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				INFOPLIST_FILE = "LogicTests/LogicTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
@@ -850,6 +859,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
@@ -862,6 +872,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LogicTests/LogicTests-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				INFOPLIST_FILE = "LogicTests/LogicTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
@@ -909,6 +920,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -934,6 +946,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -965,6 +978,7 @@
 				9B22C2F717A5A7D20051E58B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9BC5C23E177508040090A6C1 /* Build configuration list for PBXNativeTarget "LogicTests" */ = {
 			isa = XCConfigurationList;

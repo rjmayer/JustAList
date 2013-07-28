@@ -26,7 +26,7 @@
 #import "PlistDataArchivingUtil.h"
 
 // System paths
-#define kDocumentsDirectoryPath [[[[[[NSFileManager alloc] init] autorelease] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject] path]
+#define kDocumentsDirectoryPath [[[[[NSFileManager alloc] init] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject] path]
 
 // Custom filename (for now it's hardcoded, in the fure maybe passed on init)
 #define kPersitentDataDocumentsFilename @"UserData"

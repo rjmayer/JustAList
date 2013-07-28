@@ -12,7 +12,7 @@
 
 @interface JALAppDataInRAM ()
 
-@property (nonatomic, retain) NSSet* listItems;
+@property (nonatomic, strong) NSSet* listItems;
 
 @end
 
@@ -34,12 +34,6 @@
     return self;
 }
 
-- (void)dealloc
-{
-    self.listItems = nil;
-    
-    [super dealloc];
-}
 
 
 #pragma mark - JALAppData Protocol

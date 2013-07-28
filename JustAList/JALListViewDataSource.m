@@ -22,7 +22,6 @@
 - (void)dealloc
 {
     NSLog(@"JALMainViewDataSource dealloc");
-    [super dealloc];
 }
 
 # pragma mark UITableViewDataSource
@@ -47,7 +46,7 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
     cell.textLabel.text = [NSString stringWithFormat:@"cell %d from JALMainViewDataSource", indexPath.row+1];

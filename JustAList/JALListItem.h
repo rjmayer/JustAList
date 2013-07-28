@@ -14,7 +14,7 @@
 }
 
 @property NSUInteger identifier;
-@property (nonatomic, retain) NSString *title;
+@property (nonatomic, strong) NSString *title;
 @property BOOL isTicked;
 @property BOOL isStarred;
 

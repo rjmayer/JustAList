@@ -13,7 +13,7 @@
     
 }
 
-@property (nonatomic, retain) IBOutlet NSDictionary* classMap;
+@property (nonatomic, strong) IBOutlet NSDictionary* classMap;
 
 + (RJMDataFacade*)sharedInstance;
 

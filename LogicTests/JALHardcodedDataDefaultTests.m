@@ -24,7 +24,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 @interface JALHardcodedDataDefaultTests ()
-@property (nonatomic, retain) JALHardcodedDataDefault *unitUnderTest;
+@property (nonatomic, strong) JALHardcodedDataDefault *unitUnderTest;
 @end
 
 

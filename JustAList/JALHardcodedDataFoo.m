@@ -36,10 +36,6 @@
     return self;
 }
 
-- (void)dealloc
-{
-    [super dealloc];
-}
 
 ////////////////////////////////////////////////////////////////////////////////
 #pragma mark - protocol implementation JALHardcodedData
@@ -64,7 +60,7 @@
     int numItems = 100;
     
     for (int i=0; i<numItems; i++) {
-        JALListItem *listItem = [[[JALListItem alloc] init] autorelease];
+        JALListItem *listItem = [[JALListItem alloc] init];
         // set id
         listItem.identifier = i;
         // set name

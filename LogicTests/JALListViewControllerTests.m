@@ -17,7 +17,7 @@
 
 #pragma mark Private Inteface
 @interface JALListViewControllerTests ()
-@property (nonatomic, retain) JALListViewController *unitUnderTest;
+@property (nonatomic, strong) JALListViewController *unitUnderTest;
 @end
 
 #pragma mark Implementation
@@ -29,6 +29,8 @@
 - (void)setUp
 {
     [super setUp];
+    
+    // FIXME: it's wrong I should be unarchiving the view
     
     self.unitUnderTest = [[JALListViewController alloc] init];
 }

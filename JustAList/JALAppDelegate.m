@@ -9,12 +9,10 @@
 #import "JALAppDelegate.h"
 
 @interface JALAppDelegate ()
-- (void) setTheClassMap;
 @end
 
 
 @implementation JALAppDelegate
-
 
 @synthesize window=_window;
 @synthesize navigationController=_navigationController;
@@ -23,10 +21,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Configure on-the-fly class mapping
-    [self setTheClassMap];
-    NSLog(@"Using classes: %@", [self.classMap description]);
-    
     // Init the data interface
     // TODO: there's no need for it to be a singleton if we're storing here as a prop
     // - Appwide access with [APP_DELEGATE dataFacade]
@@ -79,22 +73,6 @@
      */
 }
 
-- (void)dealloc
-{
-    [_window release];
-    [_navigationController release];
-    [classMap release];
-    [super dealloc];
-}
-
-
 #pragma mark Private
-
-- (void) setTheClassMap
-{
-    if (kRJM_ClassMapFilepath) {
-        self.classMap = [[NSDictionary alloc] initWithContentsOfFile:kRJM_ClassMapFilepath];
-    }
-}
 
 @end

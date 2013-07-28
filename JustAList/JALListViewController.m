@@ -62,11 +62,6 @@
     self.tableViewDataSource = nil;
 }
 
-- (void)dealloc
-{
-    [tableViewDataSource release];
-    [super dealloc];
-}
 
 #pragma mark Table View Delegate
 

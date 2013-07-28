@@ -17,6 +17,6 @@
 // - what happens when the view unloads (prop is set to nil); will it get reinitialised from nib when the view loads again?
 // - and if so, will it be the same instance as the table view has?
 // - it bothers me that the object in the nib is assigned to 2 outlets
-@property (nonatomic, retain) IBOutlet NSObject <UITableViewDataSource>* tableViewDataSource;
+@property (nonatomic, strong) IBOutlet NSObject <UITableViewDataSource>* tableViewDataSource;
 
 @end

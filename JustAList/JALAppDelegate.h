@@ -15,10 +15,10 @@
 @interface JALAppDelegate : NSObject <UIApplicationDelegate> {    
 }
 
-@property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) IBOutlet UINavigationController *navigationController;
+@property (nonatomic, strong) IBOutlet UIWindow *window;
+@property (nonatomic, strong) IBOutlet UINavigationController *navigationController;
 
-@property (nonatomic, retain) NSDictionary* classMap;
-@property (nonatomic, retain) RJMDataFacade* dataFacade;
+@property (nonatomic, strong) NSDictionary* classMap;
+@property (nonatomic, strong) RJMDataFacade* dataFacade;
 
 @end
