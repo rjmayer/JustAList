@@ -58,7 +58,7 @@ const int kNumTestObjects = 11;
     switch (category) {
         case JALPersistentDataCategoryDocuments:
         case JALPersistentDataCategoryAll:
-            self.listItems = [dataDict objectForKey:@"listItems"];
+            self.listItems = dataDict[@"listItems"];
             break;
             
         default:
@@ -75,9 +75,7 @@ const int kNumTestObjects = 11;
     switch (category) {
         case JALPersistentDataCategoryDocuments:
         case JALPersistentDataCategoryAll:
-            persistentData = [NSDictionary dictionaryWithObjectsAndKeys:
-                              self.listItems, @"listItems", 
-                              nil];
+            persistentData = @{@"listItems": self.listItems};
             break;
             
         default:
@@ -90,7 +88,7 @@ const int kNumTestObjects = 11;
 - (JALListItem*) getListItemForId:(NSUInteger)listItemId
 {    
     // Data Access
-    NSPredicate* predicate = [NSPredicate predicateWithFormat:@"identifier == %@", [NSNumber numberWithUnsignedInteger:listItemId]];
+    NSPredicate* predicate = [NSPredicate predicateWithFormat:@"identifier == %@", @(listItemId)];
     NSSet* filteredSet = [self.listItems filteredSetUsingPredicate:predicate];
     NSArray* result = [filteredSet allObjects];
 
@@ -98,7 +96,7 @@ const int kNumTestObjects = 11;
     JALListItem* obj = nil;
     
 	if (result != nil && result.count == 1) {
-        obj = [result objectAtIndex:0];
+        obj = result[0];
     }
 
 	return obj;
@@ -112,7 +110,7 @@ const int kNumTestObjects = 11;
 - (NSArray*) getListItemsAllTicked:(BOOL)isTicked 
 {
     // Data Access
-    NSPredicate* predicate = [NSPredicate predicateWithFormat:@"isTicked == %@", [NSNumber numberWithBool:isTicked]];
+    NSPredicate* predicate = [NSPredicate predicateWithFormat:@"isTicked == %@", @(isTicked)];
     NSSet* filteredSet = [self.listItems filteredSetUsingPredicate:predicate];
     NSArray* result = [filteredSet allObjects];
     

@@ -15,7 +15,7 @@
 	NSDictionary *result = nil;
 	
 	NSString *fname = [NSString stringWithFormat:@"%@.plist", filename];
-	NSString *rootPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+	NSString *rootPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
 	NSString *filePath = [rootPath stringByAppendingPathComponent:fname];
 	
 	NSData *aData = [NSData dataWithContentsOfFile:filePath];
@@ -29,7 +29,7 @@
 + (BOOL)writePropertyList:(NSString *)filename 
            fromDictionary:(NSDictionary *)plistDict {
 	NSString *fname = [NSString stringWithFormat:@"%@.plist", filename];
-	NSString *rootPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+	NSString *rootPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
 	NSString *filePath = [rootPath stringByAppendingPathComponent:fname];
 	
 	NSData *aData = [NSKeyedArchiver archivedDataWithRootObject:plistDict]; 

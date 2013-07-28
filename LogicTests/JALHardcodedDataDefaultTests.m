@@ -131,7 +131,7 @@
     STAssertTrueNoThrow([[udd allKeys] containsObject:kJALUserDataDictionaryObjectTypeListItemKey],
                         @"\n>>> Key %@ not found in userDataDict dictionary %@", kJALUserDataDictionaryObjectTypeListItemKey, udd);
     
-    NSArray* a = [udd objectForKey:kJALUserDataDictionaryObjectTypeListItemKey];
+    NSArray* a = udd[kJALUserDataDictionaryObjectTypeListItemKey];
     STAssertNotNil(a,
                    @"\n>>> Nil value for key %@ in userDataDict dictionary %@. It should be an array of JALListItem", kJALUserDataDictionaryObjectTypeListItemKey, udd);
     

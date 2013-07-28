@@ -42,9 +42,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 - (NSDictionary *)userDataDict
 {
- return [NSDictionary dictionaryWithObjectsAndKeys:
-         [self listItemObjects], kJALUserDataDictionaryObjectTypeListItemKey,
-         nil];
+ return @{kJALUserDataDictionaryObjectTypeListItemKey: [self listItemObjects]};
 }
 
 
