@@ -1,5 +1,5 @@
 //
-//  JALDataFromFixtureClass.h
+//  JALDataFromHardcodedData.h
 //  JustAList
 //
 //  Created by Richard Mayer on 22/06/2013.
@@ -34,6 +34,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface JALDataFromFixtureClass : NSObject
+@interface JALDataFromHardcodedData : NSObject
 
 @end

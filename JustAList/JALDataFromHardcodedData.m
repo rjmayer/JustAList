@@ -1,13 +1,13 @@
 //
-//  JALDataFromFixtureClass.m
+//  JALDataFromHardcodedData.m
 //  JustAList
 //
 //  Created by Richard Mayer on 22/06/2013.
 //  Copyright (c) 2013 Richard Mayer. All rights reserved.
 //
 
-#import "JALDataFromFixtureClass.h"
+#import "JALDataFromHardcodedData.h"
 
-@implementation JALDataFromFixtureClass
+@implementation JALDataFromHardcodedData
 
 @end

@@ -39,9 +39,19 @@
             </BuildableReference>
             <SkippedTests>
                <Test
-                  Identifier = "JALDefaultUserDataTests">
+                  Identifier = "JALListViewControllerTests">
                </Test>
             </SkippedTests>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9B22C2E717A5A7D20051E58B"
+               BuildableName = "ApplicationTests.octest"
+               BlueprintName = "ApplicationTests"
+               ReferencedContainer = "container:JustAList.xcodeproj">
+            </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
